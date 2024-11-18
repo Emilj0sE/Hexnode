@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./index.html"],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
+    extend: {
+      fontFamily: {
+        mulish: ["'Mulish'"],
+      },
+      colors: {
+        lightAsh: '#020a19',
+      },
+    },
   },
   plugins: [],
 }
