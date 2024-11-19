@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Hexnode</title>
+</head>
+<body class="font-mulish">
+
+    <!-- ***********Header************ -->
+    <header class="fixed top-0 w-full bg-transparent pt-2">
+        <div class="container w-[88%] max-w-[1300px]">
+            <nav class="py-2 flex justify-between">
+                <a href="#">
+                    <svg version="1.1" class="fill-white w-[121px] nav-fill-svg" x="0px" y="0px" viewBox="0 0 120.9 25"> 
+                        <g id="hex__logo_Layer_1"> </g> <g id="hex__logo_art_2"> <g id="hex__logo"> <g> 
+                            <path class="hex__logo_st0" d="M8.3,8.7C7.9,8.6,6.9,8.5,5.8,8.8c-0.4,0.1-1.2,0.3-2,0.7l0-7.3c0-1.1-0.9-1.9-1.9-1.9S0,1.2,0,2.2L0,23 c0,1.1,0.9,1.9,1.9,1.9C3,24.9,3.8,24,3.8,23l0-7.5v0c0.2-0.7,0.4-1.2,0.8-1.7c0.2-0.3,0.9-1,2-1.1c1.6-0.2,2.7,0.7,2.9,0.9 c1.2,1.1,1.2,2.5,1.2,2.7l0,7.1c0,0.9,0.8,1.7,1.8,1.7h0c1,0,1.8-0.8,1.8-1.7l0-7.5c0-1.5-0.5-2.6-0.8-3.1 C12.6,10.5,10.5,9,8.3,8.7z"></path> 
+                            <path class="hex__logo_st0" d="M78.2,8.5c-0.3,0-0.8-0.1-1.3,0c-2.8,0.2-4.8,2-5.2,2.4c-2.3,2.3-2.4,5.2-2.4,5.7c0,0.9,0.1,3.3,1.9,5.4  c1.3,1.5,3.3,2.5,5.7,2.7c0.3,0,0.6,0.1,1.1,0.1l0,0c0,0,0,0,0,0v0c3.4-0.1,5.7-2.6,5.8-2.7c0.3-0.3,1.9-2.4,1.9-5.4 C85.8,12.4,82.5,8.8,78.2,8.5z M81.7,16.8c-0.1,2.3-2.1,4.1-4.4,4c-2.3-0.1-4.2-2-4.1-4.3c0.1-2.3,2.1-4.1,4.4-4 C80,12.5,81.8,14.5,81.7,16.8z"></path> 
+                            <path class="hex__logo_st0" d="M59.8,8.7c-1.5,0-2.9,0.4-4.1,1.2c-0.3-0.8-1-1.3-1.9-1.3c-1.1,0-2,0.9-2,2l0,12.2c0,1.1,0.9,2,2,2 c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0.9,0,1.7-0.7,1.7-1.7l0-6.9c0-0.1,0.1-0.3,0.2-0.6c0-0.1,0.2-0.7,0.3-1  c0.4-0.9,1.1-1.4,1.3-1.5c0.8-0.5,1.5-0.6,1.7-0.6c0.6,0,1,0.1,1.3,0.1c0.2,0.1,1,0.3,1.6,0.9c1,1,1.2,2.3,1.2,2.6 c0,2.3,0,4.6,0,6.9c0,0.2,0.1,0.7,0.6,1.1c0.6,0.5,1.2,0.5,1.3,0.5h0c0.9,0,1.7-0.7,1.7-1.7l0-7.3c-0.1-0.8-0.3-2.1-1.1-3.4 C65.8,12,63.7,8.8,59.8,8.7z"></path> 
+                            <path class="hex__logo_st0" d="M118.2,10.3c-1.9-1.5-4.1-1.6-4.4-1.6c-0.3,0-1.4,0-2.8,0.4c-1.7,0.6-2.8,1.5-3.1,1.8 c-2.4,2.2-2.5,5.2-2.6,5.7c0,0.7-0.1,3.2,1.7,5.5c1.9,2.3,4.4,2.7,5.1,2.8c1.1,0.2,2.2,0.1,2.5,0c0.5-0.1,1.3-0.2,2.4-0.6  c1.4-0.6,2.3-1.4,2.9-2.1c0.3-0.8,0.3-1.6-0.2-2.1c-0.4-0.4-0.9-0.6-1-0.6c-0.9-0.2-1.7,0.3-1.8,0.4c-0.2,0.2-0.5,0.5-0.9,0.7                    c-0.8,0.5-1.6,0.5-2.1,0.5c-0.4,0-1.8,0.1-3-0.9c-1.1-0.8-1.5-1.8-1.7-2.2l11.7,0C121.3,15,120.3,12,118.2,10.3z M110.8,13.4                    c1.1-0.7,2.1-0.8,2.6-0.8c0.4,0,1.4,0,2.4,0.7c0.6,0.4,0.9,0.9,1.2,1.3l-7.3,0C109.9,14.2,110.3,13.8,110.8,13.4z"></path> 
+                            <path class="hex__logo_st0" d="M38.2,16.1c1-1,1.9-2,2.9-3c-1.2-1.2-2.4-2.4-3.7-3.6c-0.8-0.8-2.1-0.8-2.9,0c-0.8,0.8-0.8,2.1,0,2.9   C35.7,13.6,36.9,14.8,38.2,16.1z"></path> 
+                            <path class="hex__logo_st0" d="M49.1,9.1c-0.8-0.8-2.1-0.7-2.8,0.1L34.5,21.5c-0.8,0.8-0.7,2.1,0.1,2.8c0.8,0.8,2.1,0.7,2.8-0.1l4.3-4.5   l4.4,4.4c0.8,0.8,2.1,0.8,2.9,0c0.8-0.8,0.8-2.1,0-2.9l-4.4-4.5l4.6-4.8C50,11.1,49.9,9.9,49.1,9.1z"></path> 
+                            <path class="hex__logo_st0" d="M101.7,0c-1.1,0-2,0.9-2,2l0,8c-1.1-0.8-2.5-1.3-3.9-1.4v0c-0.3,0-0.8-0.1-1.3,0c-2.8,0.2-4.7,2-5.1,2.4  C87,13.2,87,16.1,87,16.6c0,0.9,0.1,3.3,1.9,5.4c1.3,1.5,3.2,2.5,5.6,2.7c0.3,0,0.6,0.1,1.1,0.1l0,0c0,0,0,0,0,0l0,0  c1.8-0.1,3.2-0.8,4.2-1.5c0.2,0.8,1,1.4,1.9,1.4c1.1,0,2-0.9,2-2l0-20.8C103.6,0.9,102.7,0,101.7,0z M99.4,16.8                    c-0.1,2.4-2.1,4.3-4.5,4.2c-2.4-0.1-4.2-2.1-4.1-4.5c0.1-2.4,2.1-4.3,4.5-4.2C97.7,12.4,99.5,14.4,99.4,16.8z"></path> 
+                            <path class="hex__logo_st0" d="M29.3,10.4c-1.9-1.5-4.1-1.6-4.4-1.6c-0.3,0-1.4,0-2.8,0.4c-1.7,0.6-2.8,1.5-3.1,1.8  c-2.4,2.2-2.5,5.2-2.6,5.7c0,0.7-0.1,3.2,1.7,5.5c1.9,2.3,4.4,2.7,5.1,2.8c1.1,0.2,2.2,0.1,2.5,0c0.5-0.1,1.3-0.2,2.4-0.6 c1.4-0.6,2.3-1.4,2.9-2.1c0.3-0.8,0.3-1.6-0.2-2.1c-0.4-0.4-0.9-0.6-1-0.6c-0.9-0.2-1.7,0.3-1.8,0.4c-0.2,0.2-0.5,0.5-0.9,0.7                    c-0.8,0.5-1.6,0.5-2.1,0.5c-0.4,0-1.8,0.1-3-0.9c-1.1-0.8-1.5-1.8-1.7-2.2l11.7,0C32.4,15,31.4,12.1,29.3,10.4z M21.9,13.5                    c1.1-0.7,2.1-0.8,2.6-0.8c0.4,0,1.4,0,2.4,0.7c0.6,0.4,0.9,0.9,1.2,1.3l-7.3,0C21,14.3,21.4,13.8,21.9,13.5z"></path> </g> </g> 
+                        </g> 
+                    </svg>
+                </a>
+                <div class="flex justify-end">
+                    <a href="#" class="text-white bg-[#dd0735] transition px-[26px] py-2.5 text-[15px] leading-[24px] rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
+                        14 Day Free Trial
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- ***********Banner section************ -->
+     <section class="pt-[120px] bg-[#020A19]">
+        <div class="container w-[88%] max-w-[1300px]">
+            <div class="grid grid-cols-2">
+                <div class="flex flex-col items-center justify-center max-w-full sm:max-w-[550px] xl:max-w-[498px] ">
+                    <h1 class="text-white text-[34px] text-start lg:text-[42px] font-bold leading-[44px] lg:leading-[53px]">
+                        Turn your devices into kiosks in a few minutes with Hexnode UEM
+                    </h1>
+                    <div class="flex mt-[20px]">
+                        <div class="w-[280px] h-[53px] sm:mr-[10px]">
+                            <input type="email" placeholder="Your Work Email" class="w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
+                        </div>
+                        <button class="w-[210px] h-[53px] text-[17px] text-white leading-6 bg-[#dd0735] rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
+                    </div>
+                </div>
+                <div>
+                    <figure class="w-[597px]">
+                        <img class="w-full h-full object-contain" src="assets/images/hexnode-kiosk.webp" alt="Banner Image">
+                    </figure>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- ***********Banner bottom section************ -->
+     <section class="py-[30px] bg-[#1A1C2B]">   
+        <div class="container w-[88%] max-w-[1300px]">
+            <div class="flex justify-between">
+
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
+                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                        <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
+                            <img src="assets/images/idc.webp" class="w-full h-full object-contain" alt="IDC Image">
+                        </figure>
+                        <p class="text-[14px] leading-[22px] text-[rgb(255,255,255,60%)] text-center md:text-left">
+                            Hexnode is listed as a leader and a major player in IDC MarketScape UEM Vendors Assessment Reports 2024.
+                        </p>
+                    </div>
+                </a>
+                
+
+                <div class="md:w-px  w-[107px]  bg-[rgb(255,255,255,20%)]"></div>
+
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
+                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                        <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
+                            <img src="assets/images/gartner.webp" class="w-full h-full object-contain" alt="IDC Image">
+                        </figure>
+                        <p class="text-[14px] leading-[22px] text-[rgb(255,255,255,60%)] text-center md:text-left">
+                            Hexnode mentioned as a Notable Vendor in Midmarket Context: Magic Quadrant for Unified Endpoint Management tools 2022.
+                        </p>
+                    </div>
+                </a>
+
+                <div class="md:w-px w-[107px] bg-[rgb(255,255,255,20%)]"></div>
+
+
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
+                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                        <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
+                            <img src="assets/images/forrester.webp" class="w-full h-full object-contain" alt="IDC Image">
+                        </figure>
+                        <p class="text-[14px] leading-[22px] text-[rgb(255,255,255,60%)] text-center md:text-left">
+                            Forrester includes Hexnode as a Notable vendor in The Unified Endpoint Management Landscape, Q3 2023.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+     </section>
+
+    <!-- ***********Tab section************ -->
+     <section class="lg:py-[120px] py-[60px]">
+        <div class="container w-[88%] max-w-[1300px]">
+            <div>
+                <h2 class="text-center text-[#020a19] text-[32px] leading-10 font-bold sm:text-[40px] sm:leading-[1.3]">
+                    Specific kiosk modes for unique use cases
+                </h2>
+                <div class="pt-[60px]"> 
+                    
+                  <div class="w-full max-w-4xl mx-auto mt-8">
+                    <!-- Tabs -->
+                    <div class="flex relative">
+                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab1">Single App Kiosk</button>
+                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab2">Multi-App Kiosk</button>
+                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab3">Web-based Kiosk</button>
+                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab4">Digital Signages</button>
+                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none " data-tab="tab5">ASAM Kiosk</button>
+
+                      <div class="slider bg-black absolute bottom-0 h-full -z-10 rounded-[6px]"></div>
+                    </div>
+                
+                    <!-- Tab Content -->
+                    <div class="tab-content mt-6" id="tab1">
+                      <h2 class="text-xl font-semibold text-black">
+                        Powerful Single-App Kiosk solutions for enhanced control
+                      </h2>
+                      <ul class="mt-4 space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                          <span class="inline-block w-4 h-4 mt-1 text-green-500">&#10003;</span>
+                          <p class="ml-2">
+                            Provision the devices to run one specialized application, with limited functionalities.
+                          </p>
+                        </li>
+                        <li class="flex items-start">
+                          <span class="inline-block w-4 h-4 mt-1 text-green-500">&#10003;</span>
+                          <p class="ml-2">
+                            Customize the device settings to cater to a specific use-case each time.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content mt-6" id="tab2">  
+                      <h2 class="text-xl font-semibold text-black">Multi-App Kiosk</h2>
+                      <p class="text-gray-600 mt-4">Manage multiple applications in a single kiosk mode setup.</p>
+                    </div>
+                    <div class="tab-content mt-6" id="tab3">
+                      <h2 class="text-xl font-semibold text-black">Web-based Kiosk</h2>
+                      <p class="text-gray-600 mt-4">Enable web applications for seamless kiosk experiences.</p>
+                    </div>
+                  </div>               
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="assets/js/script.js"></script>
+
+</body>
+</html>
