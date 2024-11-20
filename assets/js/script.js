@@ -39,4 +39,64 @@ $(document).ready(function () {
       600 // Animation duration in milliseconds
     );
   });
+
+
+  let currentIndex = null; // Track the currently active index
+
+$(".accordian-btn").click(function () {
+    const newIndex = $(this).data("index");
+
+    if (newIndex !== currentIndex) {
+        // Remove active and previous classes from all images
+        $(".accordian-image").removeClass("active previous");
+
+        if (currentIndex !== null) {
+            // If the new index is larger, the current image slides up
+            if (newIndex > currentIndex) {
+                $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
+                    transform: "translateY(-100%)", // Slide out to the top
+                    transition: "transform 0.6s ease",
+                   
+                    
+                });
+                console.log("newIndex: "+newIndex);
+                console.log("currentIndex: "+currentIndex);
+                console.log("____________________");
+                
+            }
+            // If the new index is smaller, the current image slides down
+            else if (newIndex < currentIndex) {
+                $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
+                    transform: "translateY(100%)", // Slide out to the bottom
+                    transition: "transform 0.6s ease",
+                });
+
+                
+            }
+        }
+
+        // Add 'active' class to the new image and slide it into view
+        $("figure[data-index='" + newIndex + "']").addClass("active").css({
+            transform: "translateY(0)", // Bring it to the visible position
+            transition: "transform 0.6s ease",
+        });
+
+        // Update the current index
+        currentIndex = newIndex;
+
+        // Slide down/up content
+        $(".content-container").slideUp(300); // Hide all content containers
+        $(this).find(".content-container").slideDown(300); // Show the clicked content container
+    }
+});
+
+  
+
+
+
+
+
+
+
+
 });
