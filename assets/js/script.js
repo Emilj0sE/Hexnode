@@ -41,58 +41,53 @@ $(document).ready(function () {
   });
 
 
-  let currentIndex = null; // Track the currently active index
+  let currentIndex = 1; 
+  $("figure[data-index='1']").addClass("active").css({
+    transform: "translateY(0)",
+    transition: "transform 0.6s ease",
+  });
+  $(".content-container").first().slideDown(300);
 
-$(".accordian-btn").click(function () {
-    const newIndex = $(this).data("index");
+  $(".accordian-btn").click(function () {
+      const newIndex = $(this).data("index");
 
-    if (newIndex !== currentIndex) {
-        // Remove active and previous classes from all images
-        $(".accordian-image").removeClass("active previous");
+      if (newIndex !== currentIndex) {
+          $(".accordian-image").removeClass("active previous");
 
-        if (currentIndex !== null) {
-            // If the new index is larger, the current image slides up
-            if (newIndex > currentIndex) {
-                $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
-                    transform: "translateY(-100%)", // Slide out to the top
-                    transition: "transform 0.6s ease",
-                   
-                    
-                });
-                console.log("newIndex: "+newIndex);
-                console.log("currentIndex: "+currentIndex);
-                console.log("____________________");
-                
-            }
-            // If the new index is smaller, the current image slides down
-            else if (newIndex < currentIndex) {
-                $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
-                    transform: "translateY(100%)", // Slide out to the bottom
-                    transition: "transform 0.6s ease",
-                });
+          if (currentIndex !== null) {
+              if (newIndex > currentIndex) {
+                  $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
+                      transform: "translateY(-100%)", 
+                      transition: "transform 0.6s ease",
+                  });
+              }
+              else if (newIndex < currentIndex) {
+                  $("figure[data-index='" + currentIndex + "']").addClass("previous").css({
+                      transform: "translateY(100%)", 
+                      transition: "transform 0.6s ease",
+                  });
+              }
+          }
 
-                
-            }
-        }
+          $("figure[data-index='" + newIndex + "']").addClass("active").css({
+              transform: "translateY(0)", 
+              transition: "transform 0.6s ease",
+          });
 
-        // Add 'active' class to the new image and slide it into view
-        $("figure[data-index='" + newIndex + "']").addClass("active").css({
-            transform: "translateY(0)", // Bring it to the visible position
-            transition: "transform 0.6s ease",
-        });
+          currentIndex = newIndex;
 
-        // Update the current index
-        currentIndex = newIndex;
+          $(".content-container").slideUp(300); 
+          $(this).find(".content-container").slideDown(300); 
+      }
+  });
 
-        // Slide down/up content
-        $(".content-container").slideUp(300); // Hide all content containers
-        $(this).find(".content-container").slideDown(300); // Show the clicked content container
-    }
-});
-
-  
-
-
+  // Slick CArousal 
+    $('.review-carousal').slick({
+      arrows: true,
+      autoplay: true,           
+      autoplaySpeed: 10000,     
+      infinite: false,    
+    });
 
 
 

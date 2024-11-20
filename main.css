@@ -8,8 +8,8 @@
     /* Container to hold the images */
 .accordian-images-container {
     position: relative;
-    height: 300px; /* Adjust based on your image size */
     overflow: hidden; /* Hide overflowing images */
+    
 }
 
 /* Images */
@@ -35,6 +35,35 @@
     transform: translateY(-100%); /* Move above the container */
     opacity: 0;
 }
+
+
+
+
+
+
+.slick-next, .slick-prev{
+    background-color: black !important;
+}
+
+
+
+
+.slick-prev, .slick-next {
+    @apply absolute bg-cover bg-center bg-no-repeat !w-10 !h-10 cursor-pointer z-10;
+    top: 50%; /* Custom CSS property */
+    transform: translateY(-50%); /* Custom CSS property */
+}
+
+.slick-prev {
+    @apply left-[-12.5rem]; /* Adjust position as needed using Tailwind classes */
+    background-image: url('../images/prev-arrow-icon-black.svg'); /* Replace with your image path */
+}
+
+.slick-next {
+    @apply right-[-12.5rem]; /* Adjust position as needed using Tailwind classes */
+    background-image: url('path/to/next-button-image.png'); /* Replace with your image path */
+}
+
 
 
 }

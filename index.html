@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./assets/css/style.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Hexnode</title>
 </head>
@@ -30,7 +34,7 @@
                     </svg>
                 </a>
                 <div class="flex justify-end">
-                    <a href="#" class="text-white bg-[#dd0735] transition px-[26px] py-2.5 text-[15px] leading-[24px] rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
+                    <a href="#" class="text-white bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-[24px] rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
                         14 Day Free Trial
                     </a>
                 </div>
@@ -40,7 +44,7 @@
     </header>
 
     <!-- ***********Banner section************ -->
-     <section class="pt-[120px] bg-[#020A19]">
+    <section class="pt-[120px] bg-[#020A19]">
         <div class="container w-[88%] max-w-[1300px]">
             <div class="grid grid-cols-2">
                 <div class="flex flex-col items-center justify-center max-w-full sm:max-w-[550px] xl:max-w-[498px] ">
@@ -51,7 +55,7 @@
                         <div class="w-[280px] h-[53px] sm:mr-[10px]">
                             <input type="email" placeholder="Your Work Email" class="w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
                         </div>
-                        <button class="w-[210px] h-[53px] text-[17px] text-white leading-6 bg-[#dd0735] rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
+                        <button class="w-[210px] h-[53px] text-[17px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
                     </div>
                 </div>
                 <div>
@@ -61,10 +65,10 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- ***********Banner bottom section************ -->
-     <section class="py-[30px] bg-[#1A1C2B]">   
+    <section class="py-[30px] bg-[#1A1C2B]">   
         <div class="container w-[88%] max-w-[1300px]">
             <div class="flex justify-between">
 
@@ -109,10 +113,10 @@
 
             </div>
         </div>
-     </section>
+    </section>
 
      <!-- ***********Tab section************ -->
-     <section class="lg:py-[120px] py-[60px]">
+    <section class="lg:py-[120px] py-[60px]">
         <div class="container w-[88%] max-w-[1300px]">
             <div>
                 <h2 class="text-center text-[#020a19] text-[32px] leading-10 font-bold sm:text-[40px] sm:leading-[1.3]">
@@ -165,39 +169,111 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- ***********Accordian section************ -->
-     <section class="pb-[120px]">
+    <section class="pb-[120px]">
         <div class="container  w-[88%] max-w-[1300px]">
             <h2 class="text-[#020a19] text-[32px] max-w-[800px] leading-10 text-center mx-auto pb-5 font-bold sm:text-[40px] sm:leading-[1.3]">
                 What additional possibilities does the Kiosk mode offer?
             </h2>
 
-            <div class="flex gap-5">
+            <div class="flex justify-between mt-10">
                 
-                <div class="w-1/2 relative accordian-images-container overflow-hidden">
-                    <figure data-index="1" class="accordian-image absolute top-0 md:max-w-[calc(100%_-_25px)] rounded-[10px] overflow-hidden">
-                        <img src="assets/images/accordian-img1.webp" alt="Image 1">
+                <div class="w-1/2 max-w-[545px] relative accordian-images-container overflow-hidden mr-5">
+                    <figure data-index="1" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                        <img class="w-full h-auto object-cover" src="assets/images/accordian-img1.webp" alt="Image 1">
+
+                        <div class="absolute top-[20%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
+                            
+                            <p class="relative z-20 flex text-left shrink-0 mb-2.5 translate-y-0 group-hover:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[8px] py-[15px] pr-[30px] 
+                                pl-[35px] sm:pl-[50px] transition-all duration-300 ease-out">
+                                <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
+                                    <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
+                                </span>
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                    Zero touch kiosk
+                                </span>
+                            </p>
+                        </div>
+
                     </figure>
-                    <figure data-index="2" class="accordian-image absolute top-0 md:max-w-[calc(100%_-_25px)] rounded-[10px] overflow-hidden">
-                        <img src="assets/images/accordian-img2.webp" alt="Image 2">
+
+                    <figure data-index="2" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                        <img class="w-full h-auto object-cover" src="assets/images/accordian-img2.webp" alt="Image 2">
+
+                        <div class="absolute top-[80%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
+                            <p class="relative z-20 flex text-left shrink-0 mb-2.5 translate-y-0 group-hover:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[8px] py-[15px] pr-[30px] 
+                                pl-[35px] sm:pl-[50px] transition-all duration-300 ease-out">
+                                <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
+                                    <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
+                                </span>
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                    Brand visibility
+                                </span>
+                            </p>
+                        </div>
+
                     </figure>
-                    <figure data-index="3" class="accordian-image absolute top-0 md:max-w-[calc(100%_-_25px)] rounded-[10px] overflow-hidden">
-                        <img src="assets/images/accordian-img3.webp" alt="Image 3">
+
+                    <figure data-index="3" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                        <img class="w-full h-auto object-cover" src="assets/images/accordian-img3.webp" alt="Image 3">
+                        
+                        <div class="absolute top-[60%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
+                            
+                            <p class="relative z-20 flex text-left shrink-0 mb-2.5 translate-y-0 group-hover:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[8px] py-[15px] pr-[30px] 
+                                pl-[35px] sm:pl-[50px] transition-all duration-300 ease-out">
+                                <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
+                                    <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
+                                </span>
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                    Data security
+                                </span>
+                            </p>
+                        </div>
+
                     </figure>
-                    <figure data-index="4" class="accordian-image absolute top-0 md:max-w-[calc(100%_-_25px)] rounded-[10px] overflow-hidden">
-                        <img src="assets/images/accordian-img4.webp" alt="Image 4">
+
+                    <figure data-index="4" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                        <img class="w-full h-auto object-cover" src="assets/images/accordian-img4.webp" alt="Image 4">
+
+                        <div class="absolute top-[87%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
+                            
+                            <p class="relative z-20 flex text-left shrink-0 mb-2.5 translate-y-0 group-hover:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[8px] py-[15px] pr-[30px] 
+                                pl-[35px] sm:pl-[50px] transition-all duration-300 ease-out">
+                                <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
+                                    <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
+                                </span>
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                    App management
+                                </span>
+                            </p>
+                        </div>
+
                     </figure>
-                    <figure data-index="5" class="accordian-image absolute top-0 md:max-w-[calc(100%_-_25px)] rounded-[10px] overflow-hidden">
-                        <img src="assets/images/accordian-img5.webp" alt="Image 5">
+
+                    <figure data-index="5" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                        <img class="w-full h-auto object-cover" src="assets/images/accordian-img5.webp" alt="Image 5">
+
+                        <div class="absolute top-[50%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
+                            <p class="relative z-20 flex text-left shrink-0 mb-2.5 translate-y-0 group-hover:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[8px] py-[15px] pr-[30px] 
+                                pl-[35px] sm:pl-[50px] transition-all duration-300 ease-out">
+                                <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
+                                    <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
+                                </span>
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                    Easy to use interface
+                                </span>
+                            </p>
+                        </div>
+
                     </figure>
                 </div>
                 
-                <div class="w-1/2">
+                <div class="md:w-1/2 lg:w-[60%]  max-w-[725px]">
                     <div class="w-full">
                         
-                        <div class="accordian-btn relative cursor-pointer py-6 first:pt-0 last:pb-0" data-index="1">
+                        <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="1">
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Effortless kiosk deployment & management
                             </h3>
@@ -206,10 +282,19 @@
                                     Deploy kiosk-enabled devices straight out of the box. Flash a custom Android Enterprise, Samsung Knox or 
                                     ROM with Hexnode App on the devices by collaborating with OEM vendors who provide specially configured ROMs.
                                 </p>
+                                <a href="#" class="uppercase text-lg leading-[23px] mt-2.5 text-cmnRed font-semibold items-center group inline-flex">
+                                    Try for free
+                                    <div class="translate-x-0 group-hover:translate-x-[3px] transition-all duration-300 ease-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6.575" height="10.737" class="ml-[5px]">
+                                            <path fill="none" stroke="#dd0735" stroke-linecap="round" d="m.707.707 5.161 5.161-5.161 5.161" data-name="arrow - icon"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                                
                             </div>
                         </div>
             
-                        <div class="accordian-btn relative cursor-pointer py-6 first:pt-0 last:pb-0" data-index="2">
+                        <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="2">
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Customized interface for brand visibility
                             </h3>
@@ -218,10 +303,18 @@
                                     Create a locked-down environment with customized interface. Maximize brand visibility and leave a lasting 
                                     impression by showcasing products, services and key messages directly to users through the customized interface.
                                 </p>
+                                <a href="#" class="uppercase text-lg leading-[23px] mt-2.5 text-cmnRed font-semibold items-center group inline-flex">
+                                    Try for free
+                                    <div class="translate-x-0 group-hover:translate-x-[3px] transition-all duration-300 ease-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6.575" height="10.737" class="ml-[5px]">
+                                            <path fill="none" stroke="#dd0735" stroke-linecap="round" d="m.707.707 5.161 5.161-5.161 5.161" data-name="arrow - icon"></path>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
             
-                        <div class="accordian-btn relative cursor-pointer py-6 first:pt-0 last:pb-0" data-index="3">
+                        <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="3">
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 What more can you do with Hexnode kiosk?
                             </h3>
@@ -231,10 +324,18 @@
                                     still in kiosk mode. Prevent your data from falling into the wrong hands even in case of device loss/theft 
                                     with the various remote management features.
                                 </p>
+                                <a href="#" class="uppercase text-lg leading-[23px] mt-2.5 text-cmnRed font-semibold items-center group inline-flex">
+                                    Try for free
+                                    <div class="translate-x-0 group-hover:translate-x-[3px] transition-all duration-300 ease-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6.575" height="10.737" class="ml-[5px]">
+                                            <path fill="none" stroke="#dd0735" stroke-linecap="round" d="m.707.707 5.161 5.161-5.161 5.161" data-name="arrow - icon"></path>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
             
-                        <div class="accordian-btn relative cursor-pointer py-6 first:pt-0 last:pb-0" data-index="4">
+                        <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="4">
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Secure and update your app ecosystem
                             </h3>
@@ -243,10 +344,18 @@
                                     Streamline the deployment and management on apps on your kiosk devices. Save your time and effort, 
                                     ensure security and improve your efficiency using Hexnode’s silent app installation and update features.
                                 </p>
+                                <a href="#" class="uppercase text-lg leading-[23px] mt-2.5 text-cmnRed font-semibold items-center group inline-flex">
+                                    Try for free
+                                    <div class="translate-x-0 group-hover:translate-x-[3px] transition-all duration-300 ease-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6.575" height="10.737" class="ml-[5px]">
+                                            <path fill="none" stroke="#dd0735" stroke-linecap="round" d="m.707.707 5.161 5.161-5.161 5.161" data-name="arrow - icon"></path>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
             
-                        <div class="accordian-btn relative cursor-pointer py-6 first:pt-0 last:pb-0" data-index="5">
+                        <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="5">
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Provide an easy-to-use interface for end-users
                             </h3>
@@ -256,6 +365,14 @@
                                     An intuitive interface to let them access only the essential settings they need. Make it easy for 
                                     them to unlock the full potential of your devices hassle-free.
                                 </p>
+                                <a href="#" class="uppercase text-lg leading-[23px] mt-2.5 text-cmnRed font-semibold items-center group inline-flex">
+                                    Try for free
+                                    <div class="translate-x-0 group-hover:translate-x-[3px] transition-all duration-300 ease-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6.575" height="10.737" class="ml-[5px]">
+                                            <path fill="none" stroke="#dd0735" stroke-linecap="round" d="m.707.707 5.161 5.161-5.161 5.161" data-name="arrow - icon"></path>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         
@@ -263,10 +380,113 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-     <script src="assets/js/script.js"></script>
+    <!-- ***********Carousal section************ -->
+    <section class="pb-[30px] pt-[60px] lg:pt-[120px] md:pb-[60px] bg-[#F7F7F7]">
+        <div class="container w-[88%] max-w-[1300px]">
+            <h2 class="text-[32px] md:text-[40px] leading-10 md:leading-[1.3] text-center font-bold text-[#020a19] pb-0 md:pb-5">
+                Why should you choose Hexnode?
+            </h2>
+
+
+            <div class="max-w-[280px] sm:max-w-[400px] md:max-w-[960px] lg:max-w-[780px] xl:max-w-[960px] pt-[40px] pb-[80px] relative mx-auto lg:pb-0">
+
+                <div class="review-carousal">
+
+                    <div class="item">
+                        <div class="flex rounded-[18px] overflow-hidden">
+                            <div class="max-w-[320px]">
+                                <figure class="w-full h-full ">
+                                    <img class="w-full h-full object-cover" src="assets/images/justin-modrak.webp" alt="Justin Modark">
+                                </figure>
+                            </div>
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
+                                <div class="md:mt-10 md:mb-5">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                        "Hexnode is of great value. Works great with Android and iOS!"
+                                    </h4>
+                                </div>
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                        Justin Modrak
+                                    </h6>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                        Technology Coordinator
+                                    </small>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                        East Troy Community School District
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="flex rounded-[18px] overflow-hidden">
+                            <div class="max-w-[320px]">
+                                <figure class="w-full h-full ">
+                                    <img class="w-full h-full object-cover" src="assets/images/dalibor-kruljac.webp" alt="Dalibor Kruljac">
+                                </figure>
+                            </div>
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
+                                <div class="md:mt-10 md:mb-5">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                        "Most complete MDM solution I found, and I tested many of them, including major names"
+                                    </h4>
+                                </div>
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                        Dalibor Kruljac
+                                    </h6>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                        KAMELEYA LTD
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="flex rounded-[18px] overflow-hidden">
+                            <div class="max-w-[320px]">
+                                <figure class="w-full h-full ">
+                                    <img class="w-full h-full object-cover" src="assets/images/chris-robinson.webp" alt="Chris Robinson">
+                                </figure>
+                            </div>
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
+                                <div class="md:mt-10 md:mb-5">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                        "It seemed to be in-line with everything we were looking at."
+                                    </h4>
+                                </div>
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                        Chris Robinson
+                                    </h6>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                        Executive Account Manager, NCS
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>  
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
