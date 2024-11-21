@@ -11,6 +11,7 @@ module.exports = {
       },
       colors: {
         lightAsh: '#020a19',
+        cmnRed: '#dd0735',
       },
     },
   },
