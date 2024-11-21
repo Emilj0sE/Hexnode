@@ -10,8 +10,10 @@ module.exports = {
         mulish: ["'Mulish'"],
       },
       colors: {
-        lightAsh: '#020a19',
+        darkAsh: '#020a19',
         cmnRed: '#dd0735',
+        csAsh: '#556575',
+        lightAsh: '#333333',
       },
     },
   },
