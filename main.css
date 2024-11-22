@@ -40,30 +40,65 @@
 
 
 
-
-.slick-next, .slick-prev{
-    background-color: black !important;
+.slick-next::before ,
+.slick-prev::before{
+    color: transparent !important;
+    content: '' !important;
+    display: none !important;
 }
+/* Override hover and focus styles for Slick Slider buttons */
+.slick-next:focus, .slick-next:hover ,.slick-prev:focus, .slick-prev:hover{
+    color: inherit !important; /* Restore default text color if needed */
+    outline: none !important; /* Remove focus outline */
+    background-image: url('../images/next-arrow-icon-black.svg');
 
+}
+.slick-prev:focus, .slick-prev:hover {
+    background-image: url('../images/prev-arrow-icon-black.svg');
+}
 
 
 
 .slick-prev, .slick-next {
-    @apply absolute bg-cover bg-center bg-no-repeat !w-10 !h-10 cursor-pointer z-10;
-    top: 50%; /* Custom CSS property */
-    transform: translateY(-50%); /* Custom CSS property */
-}
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+  
 
+/* input.css */
 .slick-prev {
-    @apply left-[-12.5rem]; /* Adjust position as needed using Tailwind classes */
-    background-image: url('../images/prev-arrow-icon-black.svg'); /* Replace with your image path */
-}
 
-.slick-next {
-    @apply right-[-12.5rem]; /* Adjust position as needed using Tailwind classes */
-    background-image: url('path/to/next-button-image.png'); /* Replace with your image path */
-}
 
+
+    @apply cursor-pointer bottom-[-80px] absolute left-1/2 w-14 h-14 rounded-[12px] bg-[#FFFFFF] !top-auto lg:bottom-1/2 translate-x-[-62px] lg:translate-x-[-50%] lg:translate-y-[40%] lg:left-[-60px]    ;
+    background-image: url('../images/prev-arrow-icon-black.svg') !important;
+    background-size: 6px !important; /* Set the image size to 6px */
+  }
+  
+
+  .slick-next {
+      @apply  cursor-pointer bottom-[-80px] absolute left-1/2 w-14 h-14 !top-auto rounded-[12px] bg-[#FFFFFF] lg:bottom-1/2 translate-x-[8px] lg:translate-x-[50%] lg:translate-y-[40%] lg:left-[unset] lg:right-[-60px];
+      background-image: url('../images/next-arrow-icon-black.svg');
+        background-size: 6px !important; /* Set the image size to 6px */
+
+  }
+
+  .tab-btn button:focus-visible{
+    outline: 0 !important;
+    outline-offset: 0 !important;
+  }
+
+
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; 
+  }
 
 
 }

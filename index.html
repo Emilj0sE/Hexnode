@@ -34,7 +34,7 @@
                     </svg>
                 </a>
                 <div class="flex justify-end">
-                    <a href="#" class="text-white bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-[24px] rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
+                    <a href="#" class="text-white bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-6 rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
                         14 Day Free Trial
                     </a>
                 </div>
@@ -44,7 +44,7 @@
     </header>
 
     <!-- ***********Banner section************ -->
-    <section class="pt-[120px] bg-[#020A19]">
+    <section class="pt-[120px] bg-darkAsh">
         <div class="container w-[88%] max-w-[1300px]">
             <div class="grid grid-cols-2">
                 <div class="flex flex-col items-center justify-center max-w-full sm:max-w-[550px] xl:max-w-[498px] ">
@@ -53,14 +53,14 @@
                     </h1>
                     <div class="flex mt-[20px]">
                         <div class="w-[280px] h-[53px] sm:mr-[10px]">
-                            <input type="email" placeholder="Your Work Email" class="w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
+                            <input type="email" placeholder="Your Work Email" class="text-lg leading-6 w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
                         </div>
                         <button class="w-[210px] h-[53px] text-[17px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
                     </div>
                 </div>
                 <div>
                     <figure class="w-[597px]">
-                        <img class="w-full h-full object-contain" src="assets/images/hexnode-kiosk.webp" alt="Banner Image">
+                        <!-- <img class="w-full h-full object-contain" src="assets/images/hexnode-kiosk.webp" alt="Banner Image"> -->
                     </figure>
                 </div>
             </div>
@@ -119,51 +119,396 @@
     <section class="lg:py-[120px] py-[60px]">
         <div class="container w-[88%] max-w-[1300px]">
             <div>
-                <h2 class="text-center text-[#020a19] text-[32px] leading-10 font-bold sm:text-[40px] sm:leading-[1.3]">
+                <h2 class="text-center text-darkAsh text-[32px] leading-10 font-bold sm:text-[40px] sm:leading-[1.3]">
                     Specific kiosk modes for unique use cases
                 </h2>
                 <div class="pt-[60px]"> 
                     
-                  <div class=" ">
+                  <div>
                     <!-- Tabs -->
-                    <div class="flex relative">
-                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab1">Single App Kiosk</button>
-                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab2">Multi-App Kiosk</button>
-                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab3">Web-based Kiosk</button>
-                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none" data-tab="tab4">Digital Signages</button>
-                      <button class="tab-btn max-w-[260px] py-[26px] px-[30px] text-[22px] font-semibold whitespace-nowrap focus:outline-none " data-tab="tab5">ASAM Kiosk</button>
+                    <ul class="flex relative overflow-x-scroll scrollbar-hidden ">
 
-                      <div class="slider bg-black absolute bottom-0 h-full -z-10 rounded-[6px]"></div>
-                    </div>
+                        <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab1">
+                            <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out focus:bg-transparent" >
+                                Single App Kiosk
+                            </button>
+                        </li>
+                        <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab2">
+                            <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out " >
+                                Multi-App Kiosk
+                            </button>
+                        </li>
+                        <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab3">
+                            <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out" >
+                                Web-based Kiosk
+                            </button>
+                        </li>
+                        <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab4">
+                            <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out" >
+                                Digital Signages
+                            </button>
+                        </li>
+                        <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab5">
+                            <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out" >
+                                ASAM Kiosk
+                            </button>
+                        </li>
+
+                      <div class="slider bg-darkAsh absolute bottom-0 h-full z-2 rounded-[6px]"></div>
+                    </ul>
                 
+
                     <!-- Tab Content -->
-                    <div class="tab-content mt-6" id="tab1">
-                      <h2 class="text-xl font-semibold text-black">
-                        Powerful Single-App Kiosk solutions for enhanced control
-                      </h2>
-                      <ul class="mt-4 space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                          <span class="inline-block w-4 h-4 mt-1 text-green-500">&#10003;</span>
-                          <p class="ml-2">
-                            Provision the devices to run one specialized application, with limited functionalities.
-                          </p>
-                        </li>
-                        <li class="flex items-start">
-                          <span class="inline-block w-4 h-4 mt-1 text-green-500">&#10003;</span>
-                          <p class="ml-2">
-                            Customize the device settings to cater to a specific use-case each time.
-                          </p>
-                        </li>
-                      </ul>
+                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab1">
+ 
+                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10" >
+                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                Powerful Single-App Kiosk solutions for enhanced control
+                            </h3>
+
+                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Provision the devices to run one specialized application, with limited functionalities.
+                                    </p>
+                                </li>
+                                
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Customize the device settings to cater to a specific use-case each time.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Use Hexnode’s Advanced Kiosk settings for additional restrictions or expanded device functionalities while in kiosk mode.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Empower your administrators with full control over the kiosk devices.
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                            <div class="w-full">
+                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                    <img class="w-full object-contain" src="assets/images/single-app-kios-image.webp" alt="Single app kios">
+                                </figure>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="tab-content mt-6" id="tab2">  
-                      <h2 class="text-xl font-semibold text-black">Multi-App Kiosk</h2>
-                      <p class="text-gray-600 mt-4">Manage multiple applications in a single kiosk mode setup.</p>
+
+                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab2">
+ 
+                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+
+                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                Elevate efficiency with Multi-App Kiosk
+                            </h3>
+
+                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Limit device access to approved apps, ensuring focus and productivity.
+                                    </p>
+                                </li>
+                                
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        With default phone and settings app inclusion, reduce distractions by providing users access to essential functions only.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        With Hexnode's peripheral settings admins can allow necessary device settings while retaining control.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Simplify device management while empowering user productivity by deploying Multi-App Kiosk Mode.
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                            <div class="w-full">
+                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                    <img class="w-full object-contain" src="assets/images/multi-app-kiosk-image.webp" alt="Multi app kiosk">
+                                </figure>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="tab-content mt-6" id="tab3">
-                      <h2 class="text-xl font-semibold text-black">Web-based Kiosk</h2>
-                      <p class="text-gray-600 mt-4">Enable web applications for seamless kiosk experiences.</p>
+
+                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab3">
+ 
+                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+
+                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                Explore the new way to manage web apps and websites
+                            </h3>
+
+                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Let users access essential and approved web apps, website and files only.
+                                    </p>
+                                </li>
+                                
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Make the best use of website kiosk with Hexnode's advanced settings.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Tailor your experience to match your unique use case.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        From configuring toolbar options to scheduling page refresh, remote debugging, and limiting incognito tabs, take full control of your website kiosk experience.
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                            <div class="w-full">
+                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                    <img class="w-full object-contain" src="assets/images/web-based-kiosk-image.webp" alt="Web based kiosk">
+                                </figure>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab4">
+ 
+                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                Capture attention with Digital Signage Kiosks
+                            </h3>
+
+                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Transform your devices into captivating digital signage kiosks that grab attention.
+                                    </p>
+                                </li>
+                                
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Engage your audience with vibrant images and seamless video streaming.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Customize media files with trimming, muting, and background music.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Advertise and show off your brand aesthetics to attract customers in different ways.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Take control with Hexnode to reestablish your brand's presence.
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                            <div class="w-full">
+                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                    <img class="w-full object-contain" src="assets/images/digital-signage-kiosk-image.webp" alt="Digital signage kiosk">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab5">
+ 
+                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+
+                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                Unlock the power of Autonomous Single App Mode (ASAM)   
+                            </h3>
+
+                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        A feature that empowers your iOS app to seamlessly secure itself in the foreground.
+                                    </p>
+                                </li>
+                                
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Transform tablets or devices into dedicated point-of-sale (POS) systems by preventing interruptions from other applications or notifications.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Create focused, efficient and secure digital environments to match your requirements.
+                                    </p>
+                                </li>
+
+                                <li class="flex items-start relative">
+                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                        Configure ASAM effortlessly and elevate your user experience like never before.
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                            <div class="w-full">
+                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                    <img class="w-full object-contain" src="assets/images/asam-kiosk-image.webp" alt="Asam kiosk">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
                   </div>               
 
                 </div>
@@ -174,7 +519,7 @@
     <!-- ***********Accordian section************ -->
     <section class="pb-[120px]">
         <div class="container  w-[88%] max-w-[1300px]">
-            <h2 class="text-[#020a19] text-[32px] max-w-[800px] leading-10 text-center mx-auto pb-5 font-bold sm:text-[40px] sm:leading-[1.3]">
+            <h2 class="text-darkAsh text-[32px] max-w-[800px] leading-10 text-center mx-auto pb-5 font-bold sm:text-[40px] sm:leading-[1.3]">
                 What additional possibilities does the Kiosk mode offer?
             </h2>
 
@@ -191,7 +536,7 @@
                                 <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
                                     <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
                                 </span>
-                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-darkAsh font-semibold">
                                     Zero touch kiosk
                                 </span>
                             </p>
@@ -208,7 +553,7 @@
                                 <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
                                     <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
                                 </span>
-                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-darkAsh font-semibold">
                                     Brand visibility
                                 </span>
                             </p>
@@ -226,7 +571,7 @@
                                 <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
                                     <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
                                 </span>
-                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-darkAsh font-semibold">
                                     Data security
                                 </span>
                             </p>
@@ -244,7 +589,7 @@
                                 <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
                                     <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
                                 </span>
-                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-darkAsh font-semibold">
                                     App management
                                 </span>
                             </p>
@@ -261,7 +606,7 @@
                                 <span class="absolute max-sm:w-[15px] max-sm:h-[15px] left-2 top-[17px] sm:left-[15px]">
                                     <img class="w-[23px] h-[23px] object-contain" src="assets/images/tick-green.svg" alt="">
                                 </span>
-                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-[#020A19] font-semibold">
+                                <span class="text-sm leading-[22px] sm:text-lg sm:leading-[26px] text-darkAsh font-semibold">
                                     Easy to use interface
                                 </span>
                             </p>
@@ -278,7 +623,7 @@
                                 Effortless kiosk deployment & management
                             </h3>
                             <div class="content-container hidden">
-                                <p class="text-[#333333] font-normal text-[18px] leading-[28px] pt-[20px]">
+                                <p class="text-lightAsh font-normal text-lg leading-[28px] pt-[20px]">
                                     Deploy kiosk-enabled devices straight out of the box. Flash a custom Android Enterprise, Samsung Knox or 
                                     ROM with Hexnode App on the devices by collaborating with OEM vendors who provide specially configured ROMs.
                                 </p>
@@ -299,7 +644,7 @@
                                 Customized interface for brand visibility
                             </h3>
                             <div class="content-container hidden">
-                                <p class="text-[#333333] font-normal text-[18px] leading-[28px] pt-[20px]">
+                                <p class="text-lightAsh font-normal text-lg leading-[28px] pt-[20px]">
                                     Create a locked-down environment with customized interface. Maximize brand visibility and leave a lasting 
                                     impression by showcasing products, services and key messages directly to users through the customized interface.
                                 </p>
@@ -319,7 +664,7 @@
                                 What more can you do with Hexnode kiosk?
                             </h3>
                             <div class="content-container hidden">
-                                <p class="text-[#333333] font-normal text-[18px] leading-[28px] pt-[20px]">
+                                <p class="text-lightAsh font-normal text-lg leading-[28px] pt-[20px]">
                                     Ensure compliance of your devices by remotely deploying the latest OS version while the device is 
                                     still in kiosk mode. Prevent your data from falling into the wrong hands even in case of device loss/theft 
                                     with the various remote management features.
@@ -340,7 +685,7 @@
                                 Secure and update your app ecosystem
                             </h3>
                             <div class="content-container hidden">
-                                <p class="text-[#333333] font-normal text-[18px] leading-[28px] pt-[20px]">
+                                <p class="text-lightAsh font-normal text-lg leading-[28px] pt-[20px]">
                                     Streamline the deployment and management on apps on your kiosk devices. Save your time and effort, 
                                     ensure security and improve your efficiency using Hexnode’s silent app installation and update features.
                                 </p>
@@ -360,7 +705,7 @@
                                 Provide an easy-to-use interface for end-users
                             </h3>
                             <div class="content-container hidden">
-                                <p class="text-[#333333] font-normal text-[18px] leading-[28px] pt-[20px]">
+                                <p class="text-lightAsh font-normal text-lg leading-[28px] pt-[20px]">
                                     Give your end-users the power to control their devices without overwhelming them with options. 
                                     An intuitive interface to let them access only the essential settings they need. Make it easy for 
                                     them to unlock the full potential of your devices hassle-free.
@@ -383,14 +728,14 @@
     </section>
 
     <!-- ***********Carousal section************ -->
-    <section class="pb-[30px] pt-[60px] lg:pt-[120px] md:pb-[60px] bg-[#F7F7F7]">
+    <section class="pb-[30px] pt-[60px] lg:pt-[120px] md:pb-[60px] bg-offWhite">
         <div class="container w-[88%] max-w-[1300px]">
-            <h2 class="text-[32px] md:text-[40px] leading-10 md:leading-[1.3] text-center font-bold text-[#020a19] pb-0 md:pb-5">
+            <h2 class="text-[32px] md:text-[40px] leading-10 md:leading-[1.3] text-center font-bold text-darkAsh pb-0 md:pb-5">
                 Why should you choose Hexnode?
             </h2>
 
 
-            <div class="max-w-[280px] sm:max-w-[400px] md:max-w-[960px] lg:max-w-[780px] xl:max-w-[960px] pt-[40px] pb-[80px] relative mx-auto lg:pb-0">
+            <div class="max-w-[280px] sm:max-w-[400px] md:max-w-[960px] lg:max-w-[780px] xl:max-w-[960px] pt-10 pb-[80px] relative mx-auto lg:pb-0">
 
                 <div class="review-carousal">
 
@@ -403,18 +748,18 @@
                             </div>
                             <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
                                 <div class="md:mt-10 md:mb-5">
-                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "Hexnode is of great value. Works great with Android and iOS!"
                                     </h4>
                                 </div>
                                 <div class="flex justify-center items-center flex-col md:min-h-[120px]">
-                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Justin Modrak
                                     </h6>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
                                         Technology Coordinator
                                     </small>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
                                         East Troy Community School District
                                     </small>
                                 </div>
@@ -431,15 +776,15 @@
                             </div>
                             <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
                                 <div class="md:mt-10 md:mb-5">
-                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "Most complete MDM solution I found, and I tested many of them, including major names"
                                     </h4>
                                 </div>
                                 <div class="flex justify-center items-center flex-col md:min-h-[120px]">
-                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Dalibor Kruljac
                                     </h6>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
                                         KAMELEYA LTD
                                     </small>
                                 </div>
@@ -456,16 +801,44 @@
                             </div>
                             <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
                                 <div class="md:mt-10 md:mb-5">
-                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-[#020a19] font-bold text-center md:text-left ">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "It seemed to be in-line with everything we were looking at."
                                     </h4>
                                 </div>
                                 <div class="flex justify-center items-center flex-col md:min-h-[120px]">
-                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-[#020a19] font-bold ">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Chris Robinson
                                     </h6>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-[#020a19] font-normal max-w-[294px] opacity-70 ">
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
                                         Executive Account Manager, NCS
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="flex rounded-[18px] overflow-hidden">
+                            <div class="max-w-[320px]">
+                                <figure class="w-full h-full ">
+                                    <img class="w-full h-full object-cover" src="assets/images/justin-modrak.webp" alt="Justin Modark">
+                                </figure>
+                            </div>
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
+                                <div class="md:mt-10 md:mb-5">
+                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
+                                        "Hexnode is of great value. Works great with Android and iOS!"
+                                    </h4>
+                                </div>
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
+                                        Justin Modrak
+                                    </h6>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
+                                        Technology Coordinator
+                                    </small>
+                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
+                                        East Troy Community School District
                                     </small>
                                 </div>
                             </div>
@@ -479,9 +852,198 @@
 
 
 
+        
+            
+        </div>
+    </section>
+
+    <!-- ***********Logo Carousal************ -->
+    <section class="pb-[60px] pt-2.5 lg:pb-[120px] md:pt-5 bg-offWhite">
+        <div class="container w-[88%] max-w-[1300px] relative">
+            <div class="w-[70px] sm:w-[100px] h-10 sm:h-[80px] absolute left-0 bg-gradient-to-r from-offWhite via-offWhite to-transparent z-[1]"></div>
+            <div class="w-[70px] sm:w-[100px] h-10 sm:h-[80px] absolute right-0 bg-gradient-to-l from-offWhite via-offWhite to-transparent z-[1]"></div>
+            <div class="logo-carousal">
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/costco.svg" alt="Costco logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/saic.svg" alt="Saic logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/hilton.svg" alt="Hilton logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/group1-automotive.webp" alt="Group1 automotive logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/lowes.svg" alt="Lowes logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/polaris.svg" alt="Polaris logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/gorillas.svg" alt="Gorillas logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/wolt.svg" alt="Wolt logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/marriott-intl.svg" alt="Marriott logo">
+                    </figure>
+                </div>
+
+                <div>
+                    <figure class="block max-w-[130px] sm:max-w-[200px] w-full">
+                        <img class="w-full object-cover" src="assets/images/merck.svg" alt="Merck logo">
+                    </figure>
+                </div>
+
+                
+                
+            </div>
 
         </div>
     </section>
+
+    <!-- ***********PLatform section************ -->
+    <section class="pt-[60px] lg:pt-[120px] pb-[60px] lg:pb-[120px] flex justify-center items-center text-center flex-col">
+        <div class="container w-[88%] max-w-[1300px]">
+            <div>
+                <h2 class="text-center text-darkAsh md:mb-[60px] mb-10 text-[32px] leading-10 font-bold sm:text-[40px] sm:leading-[1.3]">
+                    Platforms supported
+                </h2>
+                <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2">
+                    
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] odd:pl-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/android.svg" alt="Android">
+                        </figure>
+                    </div>
+
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] even:pr-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/windows.svg" alt="Windows">
+                        </figure>
+                    </div>
+
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] odd:pl-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/ios.svg" alt="IOS">
+                        </figure>
+                    </div>
+
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] even:pr-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/android-tv.svg" alt="Android TV">
+                        </figure>
+                    </div>
+
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] odd:pl-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/apple-tv.svg" alt="Apple TV">
+                        </figure>
+                    </div>
+
+                    <div class="block shrink-0 rounded-[10px] mb-[25px] sm:mb-[15px] px-[12px] even:pr-0 mx-auto hover:-translate-y-[5px] transition-all duration-300 ease-in-out">
+                        <figure class="flex items-center justify-center max-w-[150px] h-[60px] sm:max-w-[190px] sm:h-[72px] rounded-[10px]">
+                            <img class="w-full object-contain" src="assets/images/amazon-fire.png" alt="Amazon Fire">
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***********Sign up section************ -->
+    <section class="bg-darkAsh flex justify-center items-center md:h-[330px]  py-[50px] md:py-0">
+        <div class="container w-[88%] max-w-[1300px]">
+            <div>
+                <h3 class="text-[30px] text-[#fff] font-bold leading-[38px] text-center mb-5 md:text-[42px] md:leading-[1.3]">
+                    Sign up and try Hexnode free for 14 days!
+                </h3>
+
+                <div class=" mt-[20px] mx-auto">
+                    <form action="#" class="flex justify-center">
+                        <div class="w-[324px] h-[53px] sm:mr-[8px]">
+                            <input type="email" placeholder="Your Work Email" class="text-lg leading-6 w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
+                        </div>
+                        <button class="w-[195px] h-[53px] text-[17px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] uppercase transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED</button>
+                    </form>
+                </div>
+
+                <div class="pt-[10px]">
+                    <p class="text-[17px] leading-6 text-center text-csAsh font-medium m-0 pt-2.5">No credit cards required.
+                        <a class="text-[17px] leading-6 text-cmnRed font-medium whitespace-nowrap inline-block transition-all duration-[0.3s] ease-in-out pr-[20px] pb-[0px] pl-[5px] relative after:content-[''] after:w-[6px] after:h-2.5 after:absolute after:right-[5px] hover:after:right-0.5 after:top-[9px] after:bg-[url('../images/arrow-red.svg')] after:bg-no-repeat after:transition-all after:duration-[0.3s] after:ease-in-out" role="link" href="https://www.hexnode.com/mobile-device-management/request-demo/">
+                            Request a demo
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ***********Footer************ -->
+    <footer>
+        <div class="bg-[#f2f2f2] p-[30px_0] sm:p-[20px_0]">
+            <div class="container w-[88%] mx-auto md:max-w-[1300px]">
+                <div class="flex justify-between">
+                    <ul class="flex">
+                        <li class="inline-block leading-1 list-none after:content-['-'] after:text-[14px] after:leading-1 after:inline-flex after:p-[0_5px] after:opacity-8 last:after:hidden">
+                            <a href="https://www.hexnode.com/legal/terms-of-use/" class="text-xs leading-6 text-csAsh font-medium cursor-pointer transition-all duration-[0.3s] ease-in-out hover:text-darkAsh">
+                                Terms of Use
+                            </a>
+                        </li>
+
+                        <li class="inline-block leading-1 list-none after:content-['-'] after:text-[14px] after:leading-1 after:inline-flex after:p-[0_5px] after:opacity-8 last:after:hidden">
+                            <a href="https://www.hexnode.com/legal/terms-of-use/" class="text-xs leading-6 text-csAsh font-medium cursor-pointer transition-all duration-[0.3s] ease-in-out hover:text-darkAsh">
+                                Privacy
+                            </a>
+                        </li>
+                        
+                        <li class="inline-block leading-1 list-none after:content-['-'] after:text-[14px] after:leading-1 after:inline-flex after:p-[0_5px] after:opacity-8 last:after:hidden">
+                            <a href="https://www.hexnode.com/legal/terms-of-use/" class="text-xs leading-6 text-csAsh font-medium cursor-pointer transition-all duration-[0.3s] ease-in-out hover:text-darkAsh">
+                                Cookies
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <p class="text-[12px] leading-6 text-csAsh font-medium m-0">
+                            Copyright © 2024 Mitsogo Inc. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
