@@ -4,6 +4,9 @@ module.exports = {
   safelist: [
     'slick-prev',
     'slick-next',
+    'rotate',
+    'rotate-active',
+    'scrolled',
   ],
   theme: {
     container: {

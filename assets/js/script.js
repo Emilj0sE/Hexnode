@@ -40,7 +40,7 @@ function updateSliderPosition() {
     400 // Animation duration in milliseconds
   );
 }
-
+let tabId = 0;
 // Handle tab click
 $(".tab-btn").click(function () {
   const newIndex = $(this).index(); // Get the index of the clicked button
@@ -69,7 +69,8 @@ $(".tab-btn").click(function () {
   }).hide();
 
   // Show the corresponding tab content with animation
-  const tabId = $(this).data("tab");
+  tabId = $(this).data("tab");
+
   $("#" + tabId)
     .show() // Make the element visible
     .animate(
@@ -91,7 +92,130 @@ $(window).resize(function () {
   updateSliderPosition(); // Recalculate the slider position and width on window resize
 });
 
+ 
+
+    const $firstButton = $(".accord-sm-btn").first();
+
+    const $firstTabContent = $firstButton.next(".tab-content");
+
+    // Initialize the first accordion as active
+    $firstButton.addClass("active").css({
+        "background-color": "#020a19",
+        "border-color": "#020a19",
+        "color": "#ffffff",
+    }).find("span").addClass("rotate-active");
+
+    $firstTabContent.slideDown(400).css("opacity", 1);
   
+
+
+
+
+    let lastWidth = $(window).width();
+
+    $(window).on('resize', function() {
+      const currentWidth = $(window).width();
+
+      if (currentWidth <= 640 && lastWidth > 640) {
+
+        // $('.tab-content').slideUp(400);
+        // $('.tab-content').css({
+        //   transform: '',
+        // });
+        // $firstTabContent.slideDown(400).css("opacity", 1);
+
+        $('.tab-content').css({
+          transform : ''
+        });
+
+        const $firstButton = $(".accord-sm-btn").first();
+
+        const $firstTabContent = $firstButton.next(".tab-content");
+    
+        // Initialize the first accordion as active
+        $firstButton.addClass("active").css({
+            "background-color": "#020a19",
+            "border-color": "#020a19",
+            "color": "#ffffff",
+        }).find("span").addClass("rotate-active");
+    
+        $firstTabContent.slideDown(400).css("opacity", 1);
+
+
+      } else if (currentWidth > 640 && lastWidth <= 640) {
+         
+        let activeTabIndex = 0;
+        $('.tab-content').css({
+          transform : ''
+        });
+
+        // Hide all tab content except the first one, and animate the first one without translateX
+        $(".tab-content").hide().first().show().css({ opacity: 1 });
+        
+        // Add active class to the first tab button
+        $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
+        $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
+        
+        // Set the slider's initial position and size
+        const slider = $(".slider");
+        const firstTab = $(".tab-btn:first");
+        slider.css({
+          width: firstTab.outerWidth(),
+          left: firstTab.position().left,
+        });
+        
+
+
+
+          const firstTabContent = $('.tab-wrap:first .tab-content');
+
+          // Apply a transition style
+          firstTabContent.css({
+              transform: '', // Example: Changing the transform,
+          });
+          
+
+      }
+
+      // Update lastWidth to the current window width
+      lastWidth = currentWidth;
+    });
+
+
+
+
+
+    // Handle button clicks
+    $(".accord-sm-btn").click(function () {
+        const $tabContent = $(this).next(".tab-content");
+        const $svgSpan = $(this).find("span");
+
+        // Toggle slide effect for the clicked accordion
+        $tabContent.stop(true, true).slideToggle(400).css("opacity", 1);
+
+        // Close other accordion contents
+        $(".tab-content").not($tabContent).slideUp(400).css("opacity", 0);
+
+        // Rotate the arrow for the clicked button
+        $svgSpan.toggleClass("rotate-active");
+
+        // Add styles to the clicked button
+        $(this).addClass("active").css({
+            "background-color": "#020a19",
+            "border-color": "#020a19",
+            "color": "#ffffff",
+        });
+
+        // Reset styles and rotation for other buttons
+        $(".accord-sm-btn").not(this).removeClass("active").css({
+            "background-color": "",
+            "border-color": "",
+            "color": "",
+        }).find("span").removeClass("rotate-active");
+    });
+
+
+
 
 
 
@@ -150,8 +274,8 @@ $(window).resize(function () {
   // Review Carousal 
   $('.review-carousal').slick({
     arrows: true,
-    autoplay: true, 
-    autoplaySpeed: 700,
+    autoplay: false, 
+    autoplaySpeed: 10000,
     infinite: false, 
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -224,8 +348,30 @@ $(window).resize(function () {
   });
 
 
+  function headerPosition(){
+    if ($(window).scrollTop() > 10) {
+      $('header').addClass('scrolled');
+      $('header .hexanode-logo svg').addClass('scrolled');
+
+    } else {
+        // If scroll position is less than 50px, remove the 'scrolled' class
+        $('header').removeClass('scrolled');
+        $('header .hexanode-logo svg').removeClass('scrolled');
+
+    }
+  }
+
+  headerPosition();
+
+  $(window).on('scroll', function() {
+    headerPosition();
+  });
 
 
 
 
 });
+
+
+
+
