@@ -602,6 +602,10 @@ video {
   position: relative;
 }
 
+.-right-3 {
+  right: -0.75rem;
+}
+
 .-right-\[15px\] {
   right: -15px;
 }
@@ -736,8 +740,8 @@ video {
   margin-left: 5px;
 }
 
-.mr-5 {
-  margin-right: 1.25rem;
+.mr-10 {
+  margin-right: 2.5rem;
 }
 
 .mt-10 {
@@ -748,16 +752,16 @@ video {
   margin-top: 0.625rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-\[15px\] {
   margin-top: 15px;
 }
 
 .mt-\[20px\] {
   margin-top: 20px;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .block {
@@ -866,6 +870,10 @@ video {
 
 .w-\[324px\] {
   width: 324px;
+}
+
+.w-\[340px\] {
+  width: 340px;
 }
 
 .w-\[50vw\] {
@@ -993,11 +1001,6 @@ video {
 
 .translate-y-0 {
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-full {
-  --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1244,16 +1247,16 @@ video {
   padding: 26px 0;
 }
 
+.p-\[30px\] {
+  padding: 30px;
+}
+
 .p-\[30px_0\] {
   padding: 30px 0;
 }
 
 .p-\[90px_0_50px\] {
   padding: 90px 0 50px;
-}
-
-.p-\[30px\] {
-  padding: 30px;
 }
 
 .px-2\.5 {
@@ -1341,10 +1344,6 @@ video {
 
 .pb-\[0px\] {
   padding-bottom: 0px;
-}
-
-.pb-\[120px\] {
-  padding-bottom: 120px;
 }
 
 .pb-\[15px\] {
@@ -1691,6 +1690,10 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-\[0\.3s\] {
   transition-duration: 0.3s;
 }
@@ -1711,60 +1714,28 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* Container to hold the images */
-
-.accordian-images-container {
-  position: relative;
-  overflow: hidden;
-  /* Hide overflowing images */
-}
-
-/* Images */
-
 .accordian-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
   transform: translateY(100%);
-  /* Start below the container */
-  transition: transform 0.6s ease-in-out;
-  /* Smooth slide */
-  opacity: 0;
-  /* Start invisible */
 }
-
-/* Active image (visible in the container) */
 
 .accordian-image.active {
   transform: translateY(0);
-  /* Move to the visible position */
   opacity: 1;
 }
 
-/* Previous image (slides out to the top) */
-
 .accordian-image.previous {
   transform: translateY(-100%);
-  /* Move above the container */
   opacity: 0;
 }
 
 .slick-next::before ,
-.slick-prev::before{
-  color: transparent !important;
-  content: '' !important;
+    .slick-prev::before {
   display: none !important;
 }
 
-/* Override hover and focus styles for Slick Slider buttons */
-
 .slick-next:focus, .slick-next:hover ,.slick-prev:focus, .slick-prev:hover{
   color: inherit !important;
-  /* Restore default text color if needed */
   outline: none !important;
-  /* Remove focus outline */
   background-image: url('../images/next-arrow-icon-black.svg');
 }
 
@@ -1773,31 +1744,34 @@ video {
 }
 
 .slick-prev, .slick-next {
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-}
-
-/* input.css */
-
-.slick-prev {
   position: absolute;
   bottom: -80px;
   left: 50%;
   top: auto !important;
   height: 3.5rem;
   width: 3.5rem;
-  --tw-translate-x: -62px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   cursor: pointer;
   border-radius: 12px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (min-width: 1024px) {
+  .slick-prev, .slick-next {
+    bottom: 50%;
+  }
+}
+
+.slick-prev {
+  --tw-translate-x: -62px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 1024px) {
   .slick-prev {
-    bottom: 50%;
     left: -60px;
     --tw-translate-x: -50%;
     --tw-translate-y: 40%;
@@ -1808,27 +1782,15 @@ video {
 .slick-prev {
   background-image: url('../images/prev-arrow-icon-black.svg') !important;
   background-size: 9px !important;
-  /* Set the image size to 9px */
 }
 
 .slick-next {
-  position: absolute;
-  bottom: -80px;
-  left: 50%;
-  top: auto !important;
-  height: 3.5rem;
-  width: 3.5rem;
   --tw-translate-x: 8px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  cursor: pointer;
-  border-radius: 12px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 @media (min-width: 1024px) {
   .slick-next {
-    bottom: 50%;
     left: unset;
     right: -60px;
     --tw-translate-x: 50%;
@@ -1840,7 +1802,6 @@ video {
 .slick-next {
   background-image: url('../images/next-arrow-icon-black.svg');
   background-size: 9px !important;
-  /* Set the image size to 6px */
 }
 
 .tab-btn button:focus-visible{
@@ -1854,27 +1815,19 @@ video {
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
-
-.accord-sm-btn svg path {
-  fill: #020a19;
-  /* Default color */
-  transition: fill 0.3s ease;
-}
-
-/* Active state for opened accordion */
 
 .accord-sm-btn.active svg path {
   fill: #fff;
-  /* White color for active accordion */
 }
 
-/* SVG rotation */
-
 .rotate-active {
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header.scrolled {
@@ -2465,6 +2418,14 @@ header .navbar-toggler span.scrolled {
 
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:max-w-\[340px\] {
+    max-width: 340px;
   }
 
   .lg\:max-w-\[725px\] {

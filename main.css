@@ -4,121 +4,63 @@
 
 @layer utilities {
 
-
-    /* Container to hold the images */
-.accordian-images-container {
-    position: relative;
-    overflow: hidden; /* Hide overflowing images */
-    
-}
-
-/* Images */
-.accordian-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* height: 100%; */
-    transform: translateY(100%); /* Start below the container */
-    transition: transform 0.6s ease-in-out; /* Smooth slide */
-    opacity: 0; /* Start invisible */
-}
-
-/* Active image (visible in the container) */
-.accordian-image.active {
-    transform: translateY(0); /* Move to the visible position */
-    opacity: 1;
-}
-
-/* Previous image (slides out to the top) */
-.accordian-image.previous {
-    transform: translateY(-100%); /* Move above the container */
-    opacity: 0;
-}
-
-
-
-
-
-.slick-next::before ,
-.slick-prev::before{
-    color: transparent !important;
-    content: '' !important;
-    display: none !important;
-}
-/* Override hover and focus styles for Slick Slider buttons */
-.slick-next:focus, .slick-next:hover ,.slick-prev:focus, .slick-prev:hover{
-    color: inherit !important; /* Restore default text color if needed */
-    outline: none !important; /* Remove focus outline */
-    background-image: url('../images/next-arrow-icon-black.svg');
-
-}
-.slick-prev:focus, .slick-prev:hover {
-    background-image: url('../images/prev-arrow-icon-black.svg');
-}
-
-
-
-.slick-prev, .slick-next {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-  }
-  
-
-/* input.css */
-.slick-prev {
-
-
-
-    @apply cursor-pointer bottom-[-80px] absolute left-1/2 w-14 h-14 rounded-[12px] bg-[#FFFFFF] !top-auto lg:bottom-1/2 translate-x-[-62px] lg:translate-x-[-50%] lg:translate-y-[40%] lg:left-[-60px]    ;
-    background-image: url('../images/prev-arrow-icon-black.svg') !important;
-    background-size: 9px !important; /* Set the image size to 9px */
-  }
-  
-
-  .slick-next {
-      @apply  cursor-pointer bottom-[-80px] absolute left-1/2 w-14 h-14 !top-auto rounded-[12px] bg-[#FFFFFF] lg:bottom-1/2 translate-x-[8px] lg:translate-x-[50%] lg:translate-y-[40%] lg:left-[unset] lg:right-[-60px];
-      background-image: url('../images/next-arrow-icon-black.svg');
-        background-size: 9px !important; /* Set the image size to 6px */
-
-  }
-
-  .tab-btn button:focus-visible{
-    outline: 0 !important;
-    outline-offset: 0 !important;
-  }
-
-
-
-  .scrollbar-hidden {
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
-  }
-
-  .scrollbar-hidden::-webkit-scrollbar {
-    display: none; 
-  }
-
-
-
-
-.accord-sm-btn svg path {
-        fill: #020a19; /* Default color */
-        transition: fill 0.3s ease;
+    .accordian-image {
+        transform: translateY(100%);
     }
 
-    /* Active state for opened accordion */
+    .accordian-image.active {
+        transform: translateY(0); 
+        @apply opacity-100;
+    }
+
+    .accordian-image.previous {
+        transform: translateY(-100%);
+        @apply opacity-0;
+
+    }
+    .slick-next::before ,
+    .slick-prev::before{
+        @apply !hidden
+    }
+    .slick-next:focus, .slick-next:hover ,.slick-prev:focus, .slick-prev:hover{
+        color: inherit !important; 
+        outline: none !important;
+        background-image: url('../images/next-arrow-icon-black.svg');
+
+    }
+    .slick-prev:focus, .slick-prev:hover {
+        background-image: url('../images/prev-arrow-icon-black.svg');
+    }
+    .slick-prev, .slick-next {
+        @apply !bg-cover !bg-no-repeat !bg-center cursor-pointer bottom-[-80px] absolute left-1/2 w-14 h-14 rounded-[12px] bg-[#FFFFFF] !top-auto lg:bottom-1/2;
+    }
+    .slick-prev {
+        @apply translate-x-[-62px] lg:translate-x-[-50%] lg:translate-y-[40%] lg:left-[-60px];
+        background-image: url('../images/prev-arrow-icon-black.svg') !important;
+        background-size: 9px !important; 
+    }
+    .slick-next {
+        @apply translate-x-[8px] lg:translate-x-[50%] lg:translate-y-[40%] lg:left-[unset] lg:right-[-60px];
+        background-image: url('../images/next-arrow-icon-black.svg');
+        background-size: 9px !important; 
+    }
+    .tab-btn button:focus-visible{
+        outline: 0 !important;
+        outline-offset: 0 !important;
+    }
+    .scrollbar-hidden {
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        @apply !hidden;
+    }
     .accord-sm-btn.active svg path {
-        fill: #fff; /* White color for active accordion */
+        @apply fill-white
     }
-
-    /* SVG rotation */
     .rotate-active {
-        transform: rotate(0deg);
-        transition: transform 0.3s ease;
+        @apply transform rotate-0 transition-all duration-300 ease-in-out
     }
-
     header.scrolled {
         @apply bg-white transition duration-300 shadow-md;    
     }

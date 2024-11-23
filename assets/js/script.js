@@ -9,16 +9,13 @@ $(document).ready(function () {
   
     $('#sideMenu').toggleClass('translate-x-0 translate-x-full');
   
-    // Update burger icon appearance
     $('#topBar').toggleClass('active');
     $('#middleBar').toggleClass('active');
     $('#bottomBar').toggleClass('active');
   
-    // If the menu is open, ensure the 'scrolled' class is added
     if (isMenuOpen) {
       $('header .navbar-toggler span').addClass('scrolled');
     } else {
-      // Only remove 'scrolled' if the header is not scrolled
       if ($(window).scrollTop() <= 10) {
         $('header .navbar-toggler span').removeClass('scrolled');
       }
@@ -26,7 +23,7 @@ $(document).ready(function () {
   });
 
 
-  // ===============================
+  // ===================================
   // =========Scrolled header===========
   function headerPosition() {
     if ($(window).scrollTop() > 10) {
@@ -40,13 +37,13 @@ $(document).ready(function () {
   
       if (!isMenuOpen) {
         $('header .navbar-toggler span').removeClass('scrolled');
-      }
+      } 
     }
   }
   
   headerPosition();
 
-  // ===============================
+  // ===========================================================
   // =========Resetting properties of header above xl===========
   $(window).on('resize', function() {
     const currentWidth = $(window).width();
@@ -186,7 +183,6 @@ $(document).ready(function () {
 
         const $firstTabContent = $firstButton.next(".tab-content");
     
-        // Initialize the first accordion as active
         $firstButton.addClass("active").css({
             "background-color": "#020a19",
             "border-color": "#020a19",
@@ -203,14 +199,11 @@ $(document).ready(function () {
           transform : ''
         });
 
-        // Hide all tab content except the first one, and animate the first one without translateX
         $(".tab-content").hide().first().show().css({ opacity: 1 });
         
-        // Add active class to the first tab button
         $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
         $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
         
-        // Set the slider's initial position and size
         const slider = $(".slider");
         const firstTab = $(".tab-btn:first");
         slider.css({
@@ -227,27 +220,27 @@ $(document).ready(function () {
           
 
       }
+      if (currentWidth <= 1024 && lastWidth > 1024) {
+        accordianSliderSmall();
+      }
       // Update lastWidth to the current window width
       lastWidth = currentWidth;
+
     });
 
 
-    // ======================================
-    //====== Handle button clicks ==========
+    // =====================================================
+    //====== Handle button clicks on tab contents under md==========
     $(".accord-sm-btn").click(function () {
         const $tabContent = $(this).next(".tab-content");
         const $svgSpan = $(this).find("span");
 
-        // Toggle slide effect for the clicked accordion
         $tabContent.stop(true, true).slideToggle(400).css("opacity", 1);
 
-        // Close other accordion contents
         $(".tab-content").not($tabContent).slideUp(400).css("opacity", 0);
 
-        // Rotate the arrow for the clicked button
         $svgSpan.toggleClass("rotate-active");
 
-        // Add styles to the clicked button
         $(this).addClass("active").css({
             "background-color": "#020a19",
             "border-color": "#020a19",
@@ -263,9 +256,6 @@ $(document).ready(function () {
     });
 
 
-
-
-
   // =================================================== 
   // ================= Accordian section ===============
   let currentIndex = 1; 
@@ -275,7 +265,36 @@ $(document).ready(function () {
   });
   $(".content-container").first().slideDown(300);
 
+  function accordianSliderSmall(){
+    if ($(window).width() < 1024) {
+
+      $('.content-container').slideUp(0);
+      $('.accordian-btn').find('figure').slideUp(0);
+  
+      var firstBtn = $(".accordian-btn").first();
+      firstBtn.find('figure').slideDown(300);
+      firstBtn.find('.content-container').slideDown(300);
+                      
+    }
+  }
+
+
+  accordianSliderSmall();
+  
   $(".accordian-btn").click(function () {
+
+    if ($(window).width() < 1024) {
+
+      var contentContainer = $(this).find('.content-container');
+      var figure = $(this).find('figure');
+
+      $('.content-container').slideUp(0);
+      $('.accordian-btn').find('figure').slideUp(0);
+      contentContainer.slideDown(300);
+      figure.slideDown(300);
+      
+    }
+    else{
       const newIndex = $(this).data("index");
 
       if (newIndex !== currentIndex) {
@@ -306,6 +325,8 @@ $(document).ready(function () {
           $(".content-container").slideUp(300); 
           $(this).find(".content-container").slideDown(300); 
       }
+    }
+      
   });
 
 
@@ -313,7 +334,7 @@ $(document).ready(function () {
   // ============ Review Carousal =============
   $('.review-carousal').slick({
     arrows: true,
-    autoplay: false, 
+    autoplay: true, 
     autoplaySpeed: 10000,
     infinite: false, 
     pauseOnHover: false,
