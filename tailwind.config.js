@@ -21,7 +21,8 @@ module.exports = {
         cmnRed: '#dd0735',
         csAsh: '#556575',
         lightAsh: '#333333',
-        offWhite: '#f7f7f7'
+        offWhite: '#f7f7f7',
+        hoverRed: '#bb022a'
       },
       zIndex: {
         '-1': '-1',

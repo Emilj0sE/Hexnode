@@ -68,33 +68,45 @@ $(document).ready(function () {
   // ===================================
   // =========Tab section===========
   let activeTabIndex = 0;
-
-  $(".tab-content").hide().first().show().css({ opacity: 1 });
-
-  $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
-  $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
-
   const slider = $(".slider");
   const firstTab = $(".tab-btn:first");
-  slider.css({
-    width: firstTab.outerWidth(),
-    left: firstTab.position().left,
-  });
+  function resetSlider(){
+    $(".tab-content").hide().first().show().css({ opacity: 1 });
+
+    $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
+    $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
+  
+   
+    slider.css({
+      width: firstTab.outerWidth(),
+      left: firstTab.position().left,
+    });
+  
+  }
+  resetSlider();
 
   function updateSliderPosition() {
+  
     const activeTab = $(".tab-btn").eq(activeTabIndex); 
-    const activeTabPosition = activeTab.position(); 
-    
-    const scrollOffset = $(".flex.relative")[0].scrollLeft;
-
+    const ul = $(".tabBtn-wrapper");
+  
+    const activeTabPosition = activeTab.position().left; 
+    const scrollLeft = ul.scrollLeft();
+  
+    const sliderPosition = activeTabPosition + scrollLeft;
+  
     slider.stop(true, true).animate(
       {
-        left: activeTabPosition.left + scrollOffset, 
-        width: activeTab.outerWidth(),
+        left: sliderPosition,
+        width: activeTab.outerWidth(), 
       },
       400 
     );
   }
+      
+  
+
+
   let tabId = 0;
 
   $(".tab-btn").click(function () {
@@ -144,7 +156,7 @@ $(document).ready(function () {
  
 
   // ================================================
-  // =========Tab section accordian below md===========
+  // =========Tab section accordian below sm===========
     const $firstButton = $(".accord-sm-btn").first();
 
     const $firstTabContent = $firstButton.next(".tab-content");
@@ -169,15 +181,13 @@ $(document).ready(function () {
 
       if (currentWidth <= 640 && lastWidth > 640) {
 
-        // $('.tab-content').slideUp(400);
-        // $('.tab-content').css({
-        //   transform: '',
-        // });
-        // $firstTabContent.slideDown(400).css("opacity", 1);
-
         $('.tab-content').css({
           transform : ''
         });
+
+
+        $('.accord-sm-btn').removeClass('bg-darkAsh border-darkAsh text-white')
+        $('.tab-content').slideUp(400);
 
         const $firstButton = $(".accord-sm-btn").first();
 
@@ -191,38 +201,34 @@ $(document).ready(function () {
     
         $firstTabContent.slideDown(400).css("opacity", 1);
 
-
       } else if (currentWidth > 640 && lastWidth <= 640) {
-         
-        let activeTabIndex = 0;
-        $('.tab-content').css({
-          transform : ''
-        });
+        
+        resetSlider();
+        activeTabIndex=0;
+        $(".tab-btn button").addClass("text-darkAsh/50");
+        $(".tab-btn button").removeClass("text-white");
+        $(".tab-btn:first button").addClass("text-white");
 
-        $(".tab-content").hide().first().show().css({ opacity: 1 });
-        
-        $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
-        $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
-        
-        const slider = $(".slider");
-        const firstTab = $(".tab-btn:first");
-        slider.css({
-          width: firstTab.outerWidth(),
-          left: firstTab.position().left,
-        });
-        
-          const firstTabContent = $('.tab-wrap:first .tab-content');
-
-          // Apply a transition style
-          firstTabContent.css({
-              transform: '', 
-          });
+        updateSliderPosition();
           
+            const firstTabContent = $('.tab-wrap:first .tab-content');
+
+            // Apply a transition style
+            firstTabContent.css({
+                transform: '', 
+            });
+            
+          $('.tab-content').css({
+            transform : ''
+          });
+
+        
 
       }
       if (currentWidth <= 1024 && lastWidth > 1024) {
         accordianSliderSmall();
       }
+      
       // Update lastWidth to the current window width
       lastWidth = currentWidth;
 
@@ -397,11 +403,6 @@ $(document).ready(function () {
         },
     ],
   });
-
-
-
-
-
 
 });
 
