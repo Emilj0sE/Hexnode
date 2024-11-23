@@ -41,7 +41,6 @@ Usage
 
 ## Challenges Faced
 
-During the development of this project, one of the significant challenges was creating a custom-made horizontal slider. After some effort and troubleshooting, the slider was implemented successfully, but there are still minor issues that need to be addressed.
-These challenges were overcome through custom coding, and the slider is now fully functional within the constraints of the project. Future improvements may be needed to address some edge cases.
+-Custom-Made Horizontal Slider: A significant challenge during development was creating a custom-made horizontal slider. After considerable effort and troubleshooting, the slider was implemented successfully. Although it is now fully functional, there are still minor issues to address. Custom coding was crucial in overcoming these challenges, and future improvements may be required to handle specific edge cases.
 
-During development, I encountered some challenges while creating the tab contents and implementing the visual effects for them. These issues required careful adjustments to ensure the tabs functioned smoothly and matched the intended design.
+-Tab Contents and Visual Effects: Implementing the tab contents and visual effects posed challenges that required precise adjustments. The focus was on ensuring smooth functionality and maintaining the intended design. These adjustments allowed the tabs to work as expected, closely matching the desired visual style.
