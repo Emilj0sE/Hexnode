@@ -125,6 +125,18 @@
     header .hexanode-logo svg.scrolled{
         @apply fill-black;
     }
+    header .navbar-toggler span.scrolled{
+        @apply bg-black;
+    }
+    .navbar-toggler #topBar.active{
+        @apply rotate-45 mb-2.5;
+    }
+    .navbar-toggler #middleBar.active{
+        @apply opacity-0;
+    }
+    .navbar-toggler #bottomBar.active{
+        @apply -rotate-45 -mt-6;
+    }
 
 
 

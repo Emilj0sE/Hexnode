@@ -33,10 +33,50 @@
                         </g> 
                     </svg>
                 </a>
-                <div class="flex justify-end">
+
+                <div class="xl:flex justify-end hidden">
                     <a href="#" class="text-white bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-6 rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
                         14 Day Free Trial
                     </a>
+                </div>
+                
+                <!-- Burger Menu Button -->
+                <button
+                    class="navbar-toggler xl:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center gap-y-1"
+                    id="burgerIcon"
+                    type="button"
+                >
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-transform duration-300"
+                        id="topBar"
+                    ></span>
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-opacity duration-100"
+                        id="middleBar"
+                    ></span>
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-transform duration-300"
+                        id="bottomBar"
+                    ></span>
+                </button>
+                                                                                                                        
+
+                <div
+                    id="sideMenu"
+                    class="fixed xl:hidden top-0 right-0 w-[50vw] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300"
+                >
+                    <div class="border-b-[1px] border-solid border-[#dbd9d2] bg-white max-w-[100%] px-[30px] w-full py-[32px]"></div>
+
+                    <div class=" p-[30px]">
+                        <a href="#" class="text-white w-full flex justify-center items-center bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-6 rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
+                            14 Day Free Trial
+                        </a>
+                        <div class="mt-5 mb-2.5 flex justify-center">
+                            <a href="#" class="text-lg text-darkAsh font-medium leading-6 py-2.5 px-[30px] mx-auto ">Log in</a>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </nav>

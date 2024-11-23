@@ -1,99 +1,153 @@
 $(document).ready(function () {
 
+  // ===============================
+  // =========Burgur menu===========
+  let isMenuOpen = false;
+
+  $('#burgerIcon').click(function () {
+    isMenuOpen = !isMenuOpen; 
   
+    $('#sideMenu').toggleClass('translate-x-0 translate-x-full');
   
-
-
-
-
-  // Ensure activeTabIndex is declared only once at the global scope
-let activeTabIndex = 0;
-
-// Hide all tab content except the first one, and animate the first one without translateX
-$(".tab-content").hide().first().show().css({ opacity: 1 });
-
-// Add active class to the first tab button
-$(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
-$(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
-
-// Set the slider's initial position and size
-const slider = $(".slider");
-const firstTab = $(".tab-btn:first");
-slider.css({
-  width: firstTab.outerWidth(),
-  left: firstTab.position().left,
-});
-
-// Function to update the slider position and width considering scroll
-function updateSliderPosition() {
-  const activeTab = $(".tab-btn").eq(activeTabIndex); // Get the active tab based on activeTabIndex
-  const activeTabPosition = activeTab.position(); // Get the position of the active tab
+    // Update burger icon appearance
+    $('#topBar').toggleClass('active');
+    $('#middleBar').toggleClass('active');
+    $('#bottomBar').toggleClass('active');
   
-  // Get the scroll position of the parent container
-  const scrollOffset = $(".flex.relative")[0].scrollLeft;
-
-  slider.stop(true, true).animate( // Using stop(true, true) to clear the animation queue
-    {
-      left: activeTabPosition.left + scrollOffset, // Add scroll offset
-      width: activeTab.outerWidth(),
-    },
-    400 // Animation duration in milliseconds
-  );
-}
-let tabId = 0;
-// Handle tab click
-$(".tab-btn").click(function () {
-  const newIndex = $(this).index(); // Get the index of the clicked button
-  const direction = newIndex > activeTabIndex ? "right" : "left"; // Determine direction (reversed)
-
-  if (newIndex === activeTabIndex) return; // No action if the same tab is clicked
-
-  // Update activeTabIndex
-  activeTabIndex = newIndex;
-
-  // Update active class for buttons
-  $(".tab-btn button")
-    .removeClass("text-white")
-    .addClass("text-darkAsh/50");
-  $(this).find("button")
-    .removeClass("text-darkAsh/50")
-    .addClass("text-white");
-
-  // Animate the slider
-  updateSliderPosition(); // Update the slider position and width
-
-  // Reset and hide all tab contents
-  $(".tab-content").css({
-    opacity: 0,
-    transform: direction === "right" ? "translateX(50px)" : "translateX(-50px)", // Reverse translateX logic
-  }).hide();
-
-  // Show the corresponding tab content with animation
-  tabId = $(this).data("tab");
-
-  $("#" + tabId)
-    .show() // Make the element visible
-    .animate(
-      { opacity: 1 },
-      {
-        duration: 400, // Animation duration in milliseconds
-        step: function (now, fx) {
-          if (fx.prop === "opacity") {
-            const offset = direction === "right" ? -50 + now * 50 : 50 - now * 50; // Reversed transition direction
-            $(this).css("transform", `translateX(${offset}px)`);
-          }
-        },
+    // If the menu is open, ensure the 'scrolled' class is added
+    if (isMenuOpen) {
+      $('header .navbar-toggler span').addClass('scrolled');
+    } else {
+      // Only remove 'scrolled' if the header is not scrolled
+      if ($(window).scrollTop() <= 10) {
+        $('header .navbar-toggler span').removeClass('scrolled');
       }
-    );
-});
+    }
+  });
 
-// Update slider position on window resize
-$(window).resize(function () {
-  updateSliderPosition(); // Recalculate the slider position and width on window resize
-});
+
+  // ===============================
+  // =========Scrolled header===========
+  function headerPosition() {
+    if ($(window).scrollTop() > 10) {
+      $('header').addClass('scrolled');
+      $('header .hexanode-logo svg').addClass('scrolled');
+  
+        $('header .navbar-toggler span').addClass('scrolled');
+    } else {
+      $('header').removeClass('scrolled');
+      $('header .hexanode-logo svg').removeClass('scrolled');
+  
+      if (!isMenuOpen) {
+        $('header .navbar-toggler span').removeClass('scrolled');
+      }
+    }
+  }
+  
+  headerPosition();
+
+  // ===============================
+  // =========Resetting properties of header above xl===========
+  $(window).on('resize', function() {
+    const currentWidth = $(window).width();
+
+    if (currentWidth >= 1280 && lastWidth < 1280) {
+      $('#sideMenu').addClass('translate-x-full');
+      $('#sideMenu').removeClass('translate-x-0');
+      isMenuOpen = !isMenuOpen; 
+      $('#topBar, #bottomBar , #middleBar').removeClass('active');
+      
+      headerPosition();
+    } 
+  });
+
+
+  $(window).on('scroll', function() {
+    headerPosition();
+  });
+
+
+
+  // ===================================
+  // =========Tab section===========
+  let activeTabIndex = 0;
+
+  $(".tab-content").hide().first().show().css({ opacity: 1 });
+
+  $(".tab-btn:first button").addClass("text-white").removeClass("text-darkAsh/50");
+  $(".tab-btn:not(:first) button").addClass("text-darkAsh/50");
+
+  const slider = $(".slider");
+  const firstTab = $(".tab-btn:first");
+  slider.css({
+    width: firstTab.outerWidth(),
+    left: firstTab.position().left,
+  });
+
+  function updateSliderPosition() {
+    const activeTab = $(".tab-btn").eq(activeTabIndex); 
+    const activeTabPosition = activeTab.position(); 
+    
+    const scrollOffset = $(".flex.relative")[0].scrollLeft;
+
+    slider.stop(true, true).animate(
+      {
+        left: activeTabPosition.left + scrollOffset, 
+        width: activeTab.outerWidth(),
+      },
+      400 
+    );
+  }
+  let tabId = 0;
+
+  $(".tab-btn").click(function () {
+    const newIndex = $(this).index();
+    const direction = newIndex > activeTabIndex ? "right" : "left"; 
+
+    if (newIndex === activeTabIndex) return; 
+
+    activeTabIndex = newIndex;
+
+    $(".tab-btn button")
+      .removeClass("text-white")
+      .addClass("text-darkAsh/50");
+    $(this).find("button")
+      .removeClass("text-darkAsh/50")
+      .addClass("text-white");
+
+    updateSliderPosition(); 
+
+    $(".tab-content").css({
+      opacity: 0,
+      transform: direction === "right" ? "translateX(50px)" : "translateX(-50px)", 
+    }).hide();
+
+    tabId = $(this).data("tab");
+
+    $("#" + tabId)
+      .show() 
+      .animate(
+        { opacity: 1 },
+        {
+          duration: 400, 
+          step: function (now, fx) {
+            if (fx.prop === "opacity") {
+              const offset = direction === "right" ? -50 + now * 50 : 50 - now * 50; 
+              $(this).css("transform", `translateX(${offset}px)`);
+            }
+          },
+        }
+      );
+  });
+
+  $(window).resize(function () {
+    updateSliderPosition(); 
+  });
 
  
 
+  // ================================================
+  // =========Tab section accordian below md===========
     const $firstButton = $(".accord-sm-btn").first();
 
     const $firstTabContent = $firstButton.next(".tab-content");
@@ -109,8 +163,8 @@ $(window).resize(function () {
   
 
 
-
-
+  // ========================================================
+  // =========Tab section accordian resetting values===========
     let lastWidth = $(window).width();
 
     $(window).on('resize', function() {
@@ -164,28 +218,22 @@ $(window).resize(function () {
           left: firstTab.position().left,
         });
         
-
-
-
           const firstTabContent = $('.tab-wrap:first .tab-content');
 
           // Apply a transition style
           firstTabContent.css({
-              transform: '', // Example: Changing the transform,
+              transform: '', 
           });
           
 
       }
-
       // Update lastWidth to the current window width
       lastWidth = currentWidth;
     });
 
 
-
-
-
-    // Handle button clicks
+    // ======================================
+    //====== Handle button clicks ==========
     $(".accord-sm-btn").click(function () {
         const $tabContent = $(this).next(".tab-content");
         const $svgSpan = $(this).find("span");
@@ -218,8 +266,8 @@ $(window).resize(function () {
 
 
 
-
-
+  // =================================================== 
+  // ================= Accordian section ===============
   let currentIndex = 1; 
   $("figure[data-index='1']").addClass("active").css({
     transform: "translateY(0)",
@@ -261,17 +309,8 @@ $(window).resize(function () {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-  // Review Carousal 
+  // ==========================================
+  // ============ Review Carousal =============
   $('.review-carousal').slick({
     arrows: true,
     autoplay: false, 
@@ -281,14 +320,8 @@ $(window).resize(function () {
     pauseOnFocus: false,
   });
 
-  // Handle the last slide and restart autoplay
   $('.review-carousal').on('afterChange', function (event, slick, currentSlide) {
     const totalSlides = slick.slideCount;
-
-    // console.log('curr: '+currentSlide);
-    //   console.log('tot: '+totalSlides);
-    //   console.log('__________________');
-      
 
     if (currentSlide === totalSlides - 1) {
         setTimeout(() => {
@@ -302,21 +335,18 @@ $(window).resize(function () {
     }
   });
   
-
-  // Ensure autoplay restarts after manual navigation or swiping
   $('.review-carousal').on('beforeChange swipe', function (event, slick) {
     slick.slickPlay();
   });
 
 
-
-
-  // Logo Carousal (autoplay enabled)
+  // ==========================================
+  // ============ Logo Carousal =============
   $('.logo-carousal').slick({
     arrows: false,
-    autoplay: true, // Autoplay enabled
+    autoplay: true, 
     autoplaySpeed: 1000,
-    pauseOnHover: false, // Ensure autoplay doesn't pause on hover
+    pauseOnHover: false, 
     slidesToShow: 7,
     slidesToScroll: 1,
     responsive: [
@@ -348,24 +378,6 @@ $(window).resize(function () {
   });
 
 
-  function headerPosition(){
-    if ($(window).scrollTop() > 10) {
-      $('header').addClass('scrolled');
-      $('header .hexanode-logo svg').addClass('scrolled');
-
-    } else {
-        // If scroll position is less than 50px, remove the 'scrolled' class
-        $('header').removeClass('scrolled');
-        $('header .hexanode-logo svg').removeClass('scrolled');
-
-    }
-  }
-
-  headerPosition();
-
-  $(window).on('scroll', function() {
-    headerPosition();
-  });
 
 
 
