@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,10 +16,10 @@
 <body class="font-mulish">
 
     <!-- ***********Header************ -->
-    <header class="fixed top-0 w-full bg-transparent pt-2">
+    <header class="fixed top-0 w-full bg-transparent pt-2 z-50">
         <div class="container w-[88%] max-w-[1300px]">
             <nav class="py-2 flex justify-between">
-                <a href="#">
+                <a href="#"class="hexanode-logo">
                     <svg version="1.1" class="fill-white w-[121px] nav-fill-svg" x="0px" y="0px" viewBox="0 0 120.9 25"> 
                         <g id="hex__logo_Layer_1"> </g> <g id="hex__logo_art_2"> <g id="hex__logo"> <g> 
                             <path class="hex__logo_st0" d="M8.3,8.7C7.9,8.6,6.9,8.5,5.8,8.8c-0.4,0.1-1.2,0.3-2,0.7l0-7.3c0-1.1-0.9-1.9-1.9-1.9S0,1.2,0,2.2L0,23 c0,1.1,0.9,1.9,1.9,1.9C3,24.9,3.8,24,3.8,23l0-7.5v0c0.2-0.7,0.4-1.2,0.8-1.7c0.2-0.3,0.9-1,2-1.1c1.6-0.2,2.7,0.7,2.9,0.9 c1.2,1.1,1.2,2.5,1.2,2.7l0,7.1c0,0.9,0.8,1.7,1.8,1.7h0c1,0,1.8-0.8,1.8-1.7l0-7.5c0-1.5-0.5-2.6-0.8-3.1 C12.6,10.5,10.5,9,8.3,8.7z"></path> 
@@ -33,10 +33,50 @@
                         </g> 
                     </svg>
                 </a>
-                <div class="flex justify-end">
+
+                <div class="xl:flex justify-end hidden">
                     <a href="#" class="text-white bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-6 rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
                         14 Day Free Trial
                     </a>
+                </div>
+                
+                <!-- Burger Menu Button -->
+                <button
+                    class="navbar-toggler xl:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center gap-y-1"
+                    id="burgerIcon"
+                    type="button"
+                >
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-transform duration-300"
+                        id="topBar"
+                    ></span>
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-opacity duration-100"
+                        id="middleBar"
+                    ></span>
+                    <span
+                        class="block h-[3px] w-6 bg-white rounded-full transition-transform duration-300"
+                        id="bottomBar"
+                    ></span>
+                </button>
+                                                                                                                        
+
+                <div
+                    id="sideMenu"
+                    class="fixed xl:hidden top-0 right-0 w-[50vw] h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300"
+                >
+                    <div class="border-b-[1px] border-solid border-[#dbd9d2] bg-white max-w-[100%] px-[30px] w-full py-[32px]"></div>
+
+                    <div class=" p-[30px]">
+                        <a href="#" class="text-white w-full flex justify-center items-center bg-cmnRed transition px-[26px] py-2.5 text-[15px] leading-6 rounded-[3px] duration-250 hover:bg-[#bb022a]  hover:duration-250 hover:ease-in-out">
+                            14 Day Free Trial
+                        </a>
+                        <div class="mt-5 mb-2.5 flex justify-center">
+                            <a href="#" class="text-lg text-darkAsh font-medium leading-6 py-2.5 px-[30px] mx-auto ">Log in</a>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </nav>
@@ -44,23 +84,23 @@
     </header>
 
     <!-- ***********Banner section************ -->
-    <section class="pt-[120px] bg-darkAsh">
+    <section class="p-[90px_0_50px] xl:p-[120px_0_0px] bg-darkAsh">
         <div class="container w-[88%] max-w-[1300px]">
-            <div class="grid grid-cols-2">
-                <div class="flex flex-col items-center justify-center max-w-full sm:max-w-[550px] xl:max-w-[498px] ">
-                    <h1 class="text-white text-[34px] text-start lg:text-[42px] font-bold leading-[44px] lg:leading-[53px]">
+            <div class="grid grid-cols-1 xl:grid-cols-2">
+                <div class="flex flex-col order-2 xl:order-1 mx-auto items-center justify-center max-w-full sm:max-w-[550px] xl:max-w-[498px] ">
+                    <h1 class="text-white text-[34px] text-center xl:text-start lg:text-[42px] font-bold leading-[44px] lg:leading-[53px]">
                         Turn your devices into kiosks in a few minutes with Hexnode UEM
                     </h1>
-                    <div class="flex mt-[20px]">
+                    <div class="flex flex-col sm:flex-row mt-[20px]">
                         <div class="w-[280px] h-[53px] sm:mr-[10px]">
                             <input type="email" placeholder="Your Work Email" class="text-lg leading-6 w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
                         </div>
-                        <button class="w-[210px] h-[53px] text-[17px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
+                        <button class="w-full sm:w-[210px] h-[53px] text-[17px] max-sm:mt-5 text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED NOW!</button>
                     </div>
                 </div>
-                <div>
-                    <figure class="w-[597px]">
-                        <!-- <img class="w-full h-full object-contain" src="assets/images/hexnode-kiosk.webp" alt="Banner Image"> -->
+                <div class="order-1 l:order-2 flex justify-center xl:justify-end">
+                    <figure class="max-w-[597px]">
+                        <img class="w-full h-full object-contain" src="assets/images/hexnode-kiosk.webp" alt="Banner Image">
                     </figure>
                 </div>
             </div>
@@ -68,12 +108,12 @@
     </section>
 
     <!-- ***********Banner bottom section************ -->
-    <section class="py-[30px] bg-[#1A1C2B]">   
+    <section class="md:py-[30px] bg-[#1A1C2B]">   
         <div class="container w-[88%] max-w-[1300px]">
-            <div class="flex justify-between">
+            <div class="flex justify-center items-center md:justify-between flex-col md:flex-row">
 
-                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
-                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group py-10 md:py-0 md:px-10 first:pl-0 last:pr-0">
+                    <div class="flex flex-col items-center md:items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
                         <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
                             <img src="assets/images/idc.webp" class="w-full h-full object-contain" alt="IDC Image">
                         </figure>
@@ -86,8 +126,8 @@
 
                 <div class="md:w-px  w-[107px]  bg-[rgb(255,255,255,20%)]"></div>
 
-                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
-                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group py-10 md:py-0 md:px-10 first:pl-0 last:pr-0">
+                    <div class="flex flex-col items-center md:items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
                         <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
                             <img src="assets/images/gartner.webp" class="w-full h-full object-contain" alt="IDC Image">
                         </figure>
@@ -100,8 +140,8 @@
                 <div class="md:w-px w-[107px] bg-[rgb(255,255,255,20%)]"></div>
 
 
-                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group">
-                    <div class="flex flex-col items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
+                <a href="#" class="flex flex-col items-start justify-start max-w-[285px] group py-10 md:py-0 md:px-10 first:pl-0 last:pr-0">
+                    <div class="flex flex-col items-center md:items-start justify-start transform transition-transform duration-300 group-hover:translate-y-[-5px] gap-y-[15px]">
                         <figure class="flex items-center min-w-[82px] max-w-[156px] max-h-[25px] h-full">
                             <img src="assets/images/forrester.webp" class="w-full h-full object-contain" alt="IDC Image">
                         </figure>
@@ -126,7 +166,8 @@
                     
                   <div>
                     <!-- Tabs -->
-                    <ul class="flex relative overflow-x-scroll scrollbar-hidden ">
+                     <div class="hidden sm:flex">
+                    <ul class=" flex relative overflow-x-scroll scrollbar-hidden">
 
                         <li class="tab-btn flex-1 min-h-[80px] w-full px-[30px] relative text-center whitespace-normal focus:outline-none !focus-visible:outline-none transition-all duration-[400ms] ease-in-out before:content-[''] before:absolute before:left-0 before:w-[2px] before:h-full before:z-1 before:bg-offWhite" data-tab="tab1">
                             <button class="text-darkAsh/50 p-[26px_0] max-w-[240px] h-[80px] w-full flex justify-center items-center text-[22px] whitespace-nowrap font-[600] leading-6 relative z-3 duration-[500ms] ease-in-out focus:bg-transparent" >
@@ -156,356 +197,430 @@
 
                       <div class="slider bg-darkAsh absolute bottom-0 h-full z-2 rounded-[6px]"></div>
                     </ul>
+                </div>
                 
 
                     <!-- Tab Content -->
-                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab1">
- 
-                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10" >
-                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
-                                Powerful Single-App Kiosk solutions for enhanced control
-                            </h3>
+                    <div class="tab-wrap">
+                        <div class="accord-sm-btn flex sm:hidden w-full border-[1px] border-b-0 border-solid rounded-[4px] text-left text-[18px] leading-[26px] font-bold  text-[#020a19]/50 cursor-pointer items-center justify-between p-[16px]">
+                            Single App Kiosk
 
-                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Provision the devices to run one specialized application, with limited functionalities.
-                                    </p>
-                                </li>
-                                
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Customize the device settings to cater to a specific use-case each time.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Use Hexnode’s Advanced Kiosk settings for additional restrictions or expanded device functionalities while in kiosk mode.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Empower your administrators with full control over the kiosk devices.
-                                    </p>
-                                </li>
-
-                            </ul>
+                            <span class=" transform rotate-[-180deg] duration-300 h-[20px] origin-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g id="Arrow" transform="translate(-901 -5212)">
+                                        <rect id="Rectangle_2293" data-name="Rectangle 2293" width="20" height="20" transform="translate(901 5212)" fill="none"></rect>
+                                        <path id="Arrow-2" class="  fill-[#020a19]/50" data-name="Arrow" d="M13.893,7.015a.78.78,0,0,1-.5-.18L7.352,1.784,1.305,6.657a.776.776,0,0,1-.49.174.756.756,0,0,1-.083,0,.786.786,0,0,1-.525-.286L.2,6.529A.778.778,0,0,1,.306,5.393L6.847.128A.775.775,0,0,1,7.275,0l.052,0h.024a.778.778,0,0,1,.5.178l6.545,5.455a.78.78,0,0,1-.5,1.379Z" transform="translate(903.812 5218.563)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </span>
                         </div>
 
-                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
-                            <div class="w-full">
-                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
-                                    <img class="w-full object-contain" src="assets/images/single-app-kios-image.webp" alt="Single app kios">
-                                </figure>
+                        <div class="tab-content px-[15px] sm:p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab1">
+    
+                            <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10" >
+                                <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                    Powerful Single-App Kiosk solutions for enhanced control
+                                </h3>
+
+                                <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Provision the devices to run one specialized application, with limited functionalities.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Customize the device settings to cater to a specific use-case each time.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Use Hexnode’s Advanced Kiosk settings for additional restrictions or expanded device functionalities while in kiosk mode.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Empower your administrators with full control over the kiosk devices.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
-                        </div>
 
+                            <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                                <div class="w-full">
+                                    <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                        <img class="w-full object-contain" src="assets/images/single-app-kios-image.webp" alt="Single app kios">
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab2">
- 
-                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
 
-                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
-                                Elevate efficiency with Multi-App Kiosk
-                            </h3>
+                    <div class="tab-wrap">
+                        <div class="accord-sm-btn flex sm:hidden w-full border-[1px] border-b-0 border-solid rounded-[4px] text-left text-[18px] leading-[26px] font-bold  text-[#020a19]/50 cursor-pointer items-center justify-between p-[16px]">
+                            Multi-App Kiosk
 
-                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Limit device access to approved apps, ensuring focus and productivity.
-                                    </p>
-                                </li>
-                                
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        With default phone and settings app inclusion, reduce distractions by providing users access to essential functions only.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        With Hexnode's peripheral settings admins can allow necessary device settings while retaining control.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Simplify device management while empowering user productivity by deploying Multi-App Kiosk Mode.
-                                    </p>
-                                </li>
-
-                            </ul>
+                            <span class=" transform rotate-[-180deg] duration-300 h-[20px] origin-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g id="Arrow" transform="translate(-901 -5212)">
+                                        <rect id="Rectangle_2293" data-name="Rectangle 2293" width="20" height="20" transform="translate(901 5212)" fill="none"></rect>
+                                        <path id="Arrow-2" class="  fill-[#020a19]/50" data-name="Arrow" d="M13.893,7.015a.78.78,0,0,1-.5-.18L7.352,1.784,1.305,6.657a.776.776,0,0,1-.49.174.756.756,0,0,1-.083,0,.786.786,0,0,1-.525-.286L.2,6.529A.778.778,0,0,1,.306,5.393L6.847.128A.775.775,0,0,1,7.275,0l.052,0h.024a.778.778,0,0,1,.5.178l6.545,5.455a.78.78,0,0,1-.5,1.379Z" transform="translate(903.812 5218.563)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </span>
                         </div>
 
-                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
-                            <div class="w-full">
-                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
-                                    <img class="w-full object-contain" src="assets/images/multi-app-kiosk-image.webp" alt="Multi app kiosk">
-                                </figure>
+                        <div class="tab-content px-[15px] sm:p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab2">
+    
+                            <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+
+                                <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                    Elevate efficiency with Multi-App Kiosk
+                                </h3>
+
+                                <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Limit device access to approved apps, ensuring focus and productivity.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            With default phone and settings app inclusion, reduce distractions by providing users access to essential functions only.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            With Hexnode's peripheral settings admins can allow necessary device settings while retaining control.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Simplify device management while empowering user productivity by deploying Multi-App Kiosk Mode.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
-                        </div>
 
+                            <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                                <div class="w-full">
+                                    <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                        <img class="w-full object-contain" src="assets/images/multi-app-kiosk-image.webp" alt="Multi app kiosk">
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab3">
- 
-                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+                    <div class="tab-wrap">
+                        <div class="accord-sm-btn flex sm:hidden w-full border-[1px] border-b-0 border-solid rounded-[4px] text-left text-[18px] leading-[26px] font-bold  text-[#020a19]/50 cursor-pointer items-center justify-between p-[16px]">
+                            Web-based Kiosk
 
-                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
-                                Explore the new way to manage web apps and websites
-                            </h3>
-
-                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Let users access essential and approved web apps, website and files only.
-                                    </p>
-                                </li>
-                                
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Make the best use of website kiosk with Hexnode's advanced settings.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Tailor your experience to match your unique use case.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        From configuring toolbar options to scheduling page refresh, remote debugging, and limiting incognito tabs, take full control of your website kiosk experience.
-                                    </p>
-                                </li>
-
-                            </ul>
+                            <span class=" transform rotate-[-180deg] duration-300 h-[20px] origin-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g id="Arrow" transform="translate(-901 -5212)">
+                                        <rect id="Rectangle_2293" data-name="Rectangle 2293" width="20" height="20" transform="translate(901 5212)" fill="none"></rect>
+                                        <path id="Arrow-2" class="  fill-[#020a19]/50" data-name="Arrow" d="M13.893,7.015a.78.78,0,0,1-.5-.18L7.352,1.784,1.305,6.657a.776.776,0,0,1-.49.174.756.756,0,0,1-.083,0,.786.786,0,0,1-.525-.286L.2,6.529A.778.778,0,0,1,.306,5.393L6.847.128A.775.775,0,0,1,7.275,0l.052,0h.024a.778.778,0,0,1,.5.178l6.545,5.455a.78.78,0,0,1-.5,1.379Z" transform="translate(903.812 5218.563)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </span>
                         </div>
+                        <div class="tab-content px-[15px] sm:p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab3">
+    
+                            <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
 
-                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
-                            <div class="w-full">
-                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
-                                    <img class="w-full object-contain" src="assets/images/web-based-kiosk-image.webp" alt="Web based kiosk">
-                                </figure>
+                                <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                    Explore the new way to manage web apps and websites
+                                </h3>
+
+                                <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Let users access essential and approved web apps, website and files only.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Make the best use of website kiosk with Hexnode's advanced settings.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Tailor your experience to match your unique use case.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            From configuring toolbar options to scheduling page refresh, remote debugging, and limiting incognito tabs, take full control of your website kiosk experience.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
-                        </div>
 
+                            <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                                <div class="w-full">
+                                    <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                        <img class="w-full object-contain" src="assets/images/web-based-kiosk-image.webp" alt="Web based kiosk">
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab4">
- 
-                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
-                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
-                                Capture attention with Digital Signage Kiosks
-                            </h3>
+                    <div class="tab-wrap">
+                        <div class="accord-sm-btn flex sm:hidden w-full border-[1px] border-b-0 border-solid rounded-[4px] text-left text-[18px] leading-[26px] font-bold  text-[#020a19]/50 cursor-pointer items-center justify-between p-[16px]">
+                            Digital Signages
 
-                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Transform your devices into captivating digital signage kiosks that grab attention.
-                                    </p>
-                                </li>
-                                
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Engage your audience with vibrant images and seamless video streaming.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Customize media files with trimming, muting, and background music.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Advertise and show off your brand aesthetics to attract customers in different ways.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Take control with Hexnode to reestablish your brand's presence.
-                                    </p>
-                                </li>
-
-                            </ul>
+                            <span class=" transform rotate-[-180deg] duration-300 h-[20px] origin-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g id="Arrow" transform="translate(-901 -5212)">
+                                        <rect id="Rectangle_2293" data-name="Rectangle 2293" width="20" height="20" transform="translate(901 5212)" fill="none"></rect>
+                                        <path id="Arrow-2" class="  fill-[#020a19]/50" data-name="Arrow" d="M13.893,7.015a.78.78,0,0,1-.5-.18L7.352,1.784,1.305,6.657a.776.776,0,0,1-.49.174.756.756,0,0,1-.083,0,.786.786,0,0,1-.525-.286L.2,6.529A.778.778,0,0,1,.306,5.393L6.847.128A.775.775,0,0,1,7.275,0l.052,0h.024a.778.778,0,0,1,.5.178l6.545,5.455a.78.78,0,0,1-.5,1.379Z" transform="translate(903.812 5218.563)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </span>
                         </div>
+                        <div class="tab-content px-[15px] sm:p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab4">
+    
+                            <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+                                <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                    Capture attention with Digital Signage Kiosks
+                                </h3>
 
-                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
-                            <div class="w-full">
-                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
-                                    <img class="w-full object-contain" src="assets/images/digital-signage-kiosk-image.webp" alt="Digital signage kiosk">
-                                </figure>
+                                <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Transform your devices into captivating digital signage kiosks that grab attention.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Engage your audience with vibrant images and seamless video streaming.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Customize media files with trimming, muting, and background music.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Advertise and show off your brand aesthetics to attract customers in different ways.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Take control with Hexnode to reestablish your brand's presence.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
-                        </div>
 
+                            <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                                <div class="w-full">
+                                    <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                        <img class="w-full object-contain" src="assets/images/digital-signage-kiosk-image.webp" alt="Digital signage kiosk">
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="tab-content p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab5">
- 
-                        <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
+                    <div class="tab-wrap">
+                        <div class="accord-sm-btn flex sm:hidden w-full border-[1px] border-b-0 border-solid rounded-[4px] text-left text-[18px] leading-[26px] font-bold  text-[#020a19]/50 cursor-pointer items-center justify-between p-[16px]">
+                            ASAM Kiosk
 
-                            <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
-                                Unlock the power of Autonomous Single App Mode (ASAM)   
-                            </h3>
-
-                            <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        A feature that empowers your iOS app to seamlessly secure itself in the foreground.
-                                    </p>
-                                </li>
-                                
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Transform tablets or devices into dedicated point-of-sale (POS) systems by preventing interruptions from other applications or notifications.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Create focused, efficient and secure digital environments to match your requirements.
-                                    </p>
-                                </li>
-
-                                <li class="flex items-start relative">
-                                    <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
-                                            <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
-                                        </svg>
-                                    </span>
-                                    <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
-                                        Configure ASAM effortlessly and elevate your user experience like never before.
-                                    </p>
-                                </li>
-
-                            </ul>
+                            <span class=" transform rotate-[-180deg] duration-300 h-[20px] origin-center  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g id="Arrow" transform="translate(-901 -5212)">
+                                        <rect id="Rectangle_2293" data-name="Rectangle 2293" width="20" height="20" transform="translate(901 5212)" fill="none"></rect>
+                                        <path id="Arrow-2" class="  fill-[#020a19]/50" data-name="Arrow" d="M13.893,7.015a.78.78,0,0,1-.5-.18L7.352,1.784,1.305,6.657a.776.776,0,0,1-.49.174.756.756,0,0,1-.083,0,.786.786,0,0,1-.525-.286L.2,6.529A.778.778,0,0,1,.306,5.393L6.847.128A.775.775,0,0,1,7.275,0l.052,0h.024a.778.778,0,0,1,.5.178l6.545,5.455a.78.78,0,0,1-.5,1.379Z" transform="translate(903.812 5218.563)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </span>
                         </div>
+                        <div class="tab-content px-[15px] sm:p-10 flex justify-between flex-col-reverse lg:flex-row bg-offWhite overflow-hidden opacity-0 " id="tab5">
+    
+                            <div class="max-w-[760px] mb-[20px] lg:mb-0  pr-10">
 
-                        <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
-                            <div class="w-full">
-                                <figure class="rounded-[10px] overflow-hidden w-full h-full">
-                                    <img class="w-full object-contain" src="assets/images/asam-kiosk-image.webp" alt="Asam kiosk">
-                                </figure>
+                                <h3 class="text-darkAsh font-bold text-xl leading-[26px] antialiased sm:text-[28px] max-w-[670px] sm:leading-10 pb-[15px] lg:pb-10">
+                                    Unlock the power of Autonomous Single App Mode (ASAM)   
+                                </h3>
+
+                                <ul class="flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            A feature that empowers your iOS app to seamlessly secure itself in the foreground.
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Transform tablets or devices into dedicated point-of-sale (POS) systems by preventing interruptions from other applications or notifications.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Create focused, efficient and secure digital environments to match your requirements.
+                                        </p>
+                                    </li>
+
+                                    <li class="flex items-start relative">
+                                        <span class="absolute left-0 top-2 featuresTabSlider_single-list-center-icon__F7WFi">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.393" height="10.111">
+                                                <path fill="none" stroke="#60c458" stroke-width="2" d="M.697 4.107 5.45 8.718l8.247-8" data-name="tick - icon"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-base leading-6 sm:text-lg font-normal sm:leading-[28px] text-lightAsh pl-[25px] sm:pl-[30px]">
+                                            Configure ASAM effortlessly and elevate your user experience like never before.
+                                        </p>
+                                    </li>
+
+                                </ul>
                             </div>
-                        </div>
 
+                            <div class="w-full max-w-[308px] sm:max-w-[460px] max-sm:mt-[15px] mb-5 lg:mb-0">
+                                <div class="w-full">
+                                    <figure class="rounded-[10px] overflow-hidden w-full h-full">
+                                        <img class="w-full object-contain" src="assets/images/asam-kiosk-image.webp" alt="Asam kiosk">
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     
 
@@ -517,7 +632,7 @@
     </section>
 
     <!-- ***********Accordian section************ -->
-    <section class="pb-[120px]">
+    <section class="pb-[60px] lg:pb-[120px]">
         <div class="container  w-[88%] max-w-[1300px]">
             <h2 class="text-darkAsh text-[32px] max-w-[800px] leading-10 text-center mx-auto pb-5 font-bold sm:text-[40px] sm:leading-[1.3]">
                 What additional possibilities does the Kiosk mode offer?
@@ -525,8 +640,8 @@
 
             <div class="flex justify-between mt-10">
                 
-                <div class="w-1/2 max-w-[545px] relative accordian-images-container overflow-hidden mr-5">
-                    <figure data-index="1" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                <div class="w-1/2 max-w-[545px] relative items-center hidden lg:flex accordian-images-container overflow-hidden mr-10">
+                    <figure data-index="1" class="accordian-image absolute top-0 left-0 w-full transition duration-500 ease-in-out opacity-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
                         <img class="w-full h-auto object-cover" src="assets/images/accordian-img1.webp" alt="Image 1">
 
                         <div class="absolute top-[20%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
@@ -544,7 +659,7 @@
 
                     </figure>
 
-                    <figure data-index="2" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                    <figure data-index="2" class="accordian-image absolute top-0 left-0 w-full transition duration-500 ease-in-out opacity-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
                         <img class="w-full h-auto object-cover" src="assets/images/accordian-img2.webp" alt="Image 2">
 
                         <div class="absolute top-[80%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
@@ -561,7 +676,7 @@
 
                     </figure>
 
-                    <figure data-index="3" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                    <figure data-index="3" class="accordian-image absolute top-0 left-0 w-full transition duration-500 ease-in-out opacity-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
                         <img class="w-full h-auto object-cover" src="assets/images/accordian-img3.webp" alt="Image 3">
                         
                         <div class="absolute top-[60%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
@@ -579,7 +694,7 @@
 
                     </figure>
 
-                    <figure data-index="4" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                    <figure data-index="4" class="accordian-image absolute top-0 left-0 w-full transition duration-500 ease-in-out opacity-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
                         <img class="w-full h-auto object-cover" src="assets/images/accordian-img4.webp" alt="Image 4">
 
                         <div class="absolute top-[87%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
@@ -597,7 +712,7 @@
 
                     </figure>
 
-                    <figure data-index="5" class="accordian-image absolute top-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
+                    <figure data-index="5" class="accordian-image absolute top-0 left-0 w-full transition duration-500 ease-in-out opacity-0 md:max-w-[518px] rounded-[10px] group overflow-hidden">
                         <img class="w-full h-auto object-cover" src="assets/images/accordian-img5.webp" alt="Image 5">
 
                         <div class="absolute top-[50%] -right-[25px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden">
@@ -615,11 +730,30 @@
                     </figure>
                 </div>
                 
-                <div class="md:w-1/2 lg:w-[60%]  max-w-[725px]">
+                <div class="w-full lg:w-[60%]  lg:max-w-[725px]">
                     <div class="w-full">
                         
                         <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="1">
-                            <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
+
+                            <figure class="relative mx-auto  w-[340px] lg:w-full lg:max-w-[340px] rounded-[10px] overflow-hidden flex lg:hidden max-height-[241px] lg:max-height-[320px] my-5">
+
+                                <img class="w-full h-auto object-cover" src="assets/images/accordian-img1.webp" alt="Image 1">
+        
+                                <div class="absolute -right-[15px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden z-20 top-[80%]" >
+                                    <p class="relative text-left shrink-0 mb-[10px] last:mb-[0px] translate-y-0 group-hover/tabImg:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[5px] py-[4px] pr-[15px] 
+                                    pl-[30px] sm:pl-[33px] transition-all duration-300 ease-out">
+                                        <span class="absolute md:w-[15px] h-[15px] left-[8px] top-[10px] sm:left-[10px] kioskModeAccordion_acc-overlay-icon__US_oZ">
+                                            <img class="w-[15px] object-contain" alt="Tick icon" src="assets/images/tick-green.svg" >
+                                        </span>
+                                        <span class="text-[12px] leading-[15px] text-[#020A19] font-semibold kioskModeAccordion_acc-overlay-text__vfCae">
+                                            Zero touch kiosk
+                                        </span>
+                                    </p>
+                                </div>
+        
+                            </figure>
+
+                            <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left pt-5 lg:pt-0">
                                 Effortless kiosk deployment & management
                             </h3>
                             <div class="content-container hidden">
@@ -640,6 +774,25 @@
                         </div>
             
                         <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="2">
+
+                            <figure class="relative mx-auto  w-[340px] lg:w-full lg:max-w-[340px] rounded-[10px] overflow-hidden flex lg:hidden max-height-[241px] lg:max-height-[320px] my-5">
+
+                                <img class="w-full h-auto object-cover" src="assets/images/accordian-img2.webp" alt="Image 2">
+        
+                                <div class="absolute -right-[15px] -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden z-20 top-[80%]" >
+                                    <p class="relative text-left shrink-0 mb-[10px] last:mb-[0px] translate-y-0 group-hover/tabImg:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[5px] py-[4px] pr-[15px] 
+                                    pl-[30px] sm:pl-[33px] transition-all duration-300 ease-out">
+                                        <span class="absolute md:w-[15px] h-[15px] left-[8px] top-[10px] sm:left-[10px] kioskModeAccordion_acc-overlay-icon__US_oZ">
+                                            <img class="w-[15px] object-contain" alt="Tick icon" src="assets/images/tick-green.svg" >
+                                        </span>
+                                        <span class="text-[12px] leading-[15px] text-[#020A19] font-semibold kioskModeAccordion_acc-overlay-text__vfCae">
+                                            Zero touch kiosk
+                                        </span>
+                                    </p>
+                                </div>
+        
+                            </figure>
+
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Customized interface for brand visibility
                             </h3>
@@ -660,6 +813,23 @@
                         </div>
             
                         <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="3">
+                            <figure class="relative mx-auto  w-[340px] lg:w-full lg:max-w-[340px] rounded-[10px] overflow-hidden flex lg:hidden max-height-[241px] lg:max-height-[320px] my-5">
+                                <img class="w-full h-full object-cover" src="assets/images/accordian-img3.webp" alt="Image 3">
+        
+                                <div class="absolute -right-3 -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden" style="top: 60%;">
+                                    <p class="relative text-left shrink-0 mb-[10px] last:mb-[0px] translate-y-0 group-hover/tabImg:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[5px] py-[4px] pr-[15px] 
+                                        pl-[30px] sm:pl-[33px] transition-all duration-300 ease-out">
+                                        <span class="absolute md:w-[15px] h-[15px] left-[8px] top-[10px] sm:left-[10px] kioskModeAccordion_acc-overlay-icon__US_oZ">
+                                            <img class="w-[15px] object-contain" alt="Tick icon" src="assets/images/tick-green.svg" >
+                                        </span>
+                                        <span class="text-[12px] leading-[15px] text-[#020A19] font-semibold kioskModeAccordion_acc-overlay-text__vfCae">
+                                            Data security
+                                        </span>
+                                    </p>
+                                </div>
+        
+                            </figure>
+
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 What more can you do with Hexnode kiosk?
                             </h3>
@@ -681,6 +851,25 @@
                         </div>
             
                         <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="4">
+
+                            <figure class="relative mx-auto  w-[340px] lg:w-full lg:max-w-[340px] rounded-[10px] overflow-hidden flex lg:hidden max-height-[241px] lg:max-height-[320px] my-5">
+                                <img class="w-full h-full object-cover" src="assets/images/accordian-img4.webp" alt="Image 4">
+        
+                                <div class="absolute -right-3 -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden" style="top: 87%;">
+                                    <p class="relative text-left shrink-0 mb-[10px] last:mb-[0px] translate-y-0 group-hover/tabImg:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[5px] py-[4px] pr-[15px] 
+                                    pl-[30px] sm:pl-[33px] transition-all duration-300 ease-out">
+                                        <span class="absolute md:w-[15px] h-[15px] left-[8px] top-[10px] sm:left-[10px] kioskModeAccordion_acc-overlay-icon__US_oZ">
+                                            <img class="w-[15px] object-contain" alt="Tick icon" src="assets/images/tick-green.svg" >
+
+                                        </span>
+                                        <span class="text-[12px] leading-[15px] text-[#020A19] font-semibold kioskModeAccordion_acc-overlay-text__vfCae">
+                                            App management
+                                        </span>
+                                    </p>
+                                </div>
+        
+                            </figure>
+
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Secure and update your app ecosystem
                             </h3>
@@ -701,6 +890,25 @@
                         </div>
             
                         <div class="accordian-btn relative cursor-pointer py-[26px] first:pt-0 last:pb-0" data-index="5">
+
+                            <figure class="relative mx-auto  w-[340px] lg:w-full lg:max-w-[340px] rounded-[10px] overflow-hidden flex lg:hidden max-height-[241px] lg:max-height-[320px] my-5">
+                                <img class="w-full h-full object-cover" src="assets/images/accordian-img5.webp" alt="Image 5">
+        
+                                <div class="absolute -right-3 -translate-y-1/2 flex flex-col items-start justify-center py-[15px] pl-[25px] overflow-hidden" style="top: 50%;">
+                                    <p class="relative text-left shrink-0 mb-[10px] last:mb-[0px] translate-y-0 group-hover/tabImg:-translate-y-[5px] border border-solid backdrop-blur-xl bg-white/90 border-[#F2F2F2] rounded-[5px] py-[4px] pr-[15px] 
+                                    pl-[30px] sm:pl-[33px] transition-all duration-300 ease-out">
+                                        <span class="absolute md:w-[15px] h-[15px] left-[8px] top-[10px] sm:left-[10px] kioskModeAccordion_acc-overlay-icon__US_oZ">
+                                            <img class="w-[15px] object-contain" alt="Tick icon" src="assets/images/tick-green.svg" >
+
+                                        </span>
+                                        <span class="text-[12px] leading-[15px] text-[#020A19] font-semibold kioskModeAccordion_acc-overlay-text__vfCae">
+                                            Easy to use interface
+                                        </span>
+                                    </p>
+                                </div>
+        
+                            </figure>
+
                             <h3 class="text-[#050607] font-bold text-[24px] leading-9 lg:text-[26px] lg:leading-10 text-left">
                                 Provide an easy-to-use interface for end-users
                             </h3>
@@ -740,19 +948,19 @@
                 <div class="review-carousal">
 
                     <div class="item">
-                        <div class="flex rounded-[18px] overflow-hidden">
-                            <div class="max-w-[320px]">
+                        <div class="flex flex-col md:flex-row rounded-[18px] overflow-hidden">
+                            <div class="md:max-w-[320px] w-full max-w-full">
                                 <figure class="w-full h-full ">
                                     <img class="w-full h-full object-cover" src="assets/images/justin-modrak.webp" alt="Justin Modark">
                                 </figure>
                             </div>
-                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
-                                <div class="md:mt-10 md:mb-5">
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] md:pl-[60px] md:pr-[55px] ">
+                                <div class="md:mt-10 md:mb-5 pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "Hexnode is of great value. Works great with Android and iOS!"
                                     </h4>
                                 </div>
-                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px] pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Justin Modrak
                                     </h6>
@@ -768,19 +976,19 @@
                     </div>
 
                     <div class="item">
-                        <div class="flex rounded-[18px] overflow-hidden">
-                            <div class="max-w-[320px]">
+                        <div class="flex rounded-[18px] flex-col md:flex-row  overflow-hidden">
+                            <div class="md:max-w-[320px] w-full max-w-full">
                                 <figure class="w-full h-full ">
                                     <img class="w-full h-full object-cover" src="assets/images/dalibor-kruljac.webp" alt="Dalibor Kruljac">
                                 </figure>
                             </div>
-                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
-                                <div class="md:mt-10 md:mb-5">
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] md:pl-[60px] md:pr-[55px]">
+                                <div class="md:mt-10 md:mb-5 pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "Most complete MDM solution I found, and I tested many of them, including major names"
                                     </h4>
                                 </div>
-                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px] pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Dalibor Kruljac
                                     </h6>
@@ -793,52 +1001,24 @@
                     </div>
 
                     <div class="item">
-                        <div class="flex rounded-[18px] overflow-hidden">
+                        <div class="flex rounded-[18px] flex-col md:flex-row overflow-hidden">
                             <div class="max-w-[320px]">
                                 <figure class="w-full h-full ">
                                     <img class="w-full h-full object-cover" src="assets/images/chris-robinson.webp" alt="Chris Robinson">
                                 </figure>
                             </div>
-                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
-                                <div class="md:mt-10 md:mb-5">
+                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] md:pl-[60px] md:pr-[55px]">
+                                <div class="md:mt-10 md:mb-5 pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
                                         "It seemed to be in-line with everything we were looking at."
                                     </h4>
                                 </div>
-                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
+                                <div class="flex justify-center items-center flex-col md:min-h-[120px] pt-5 md:pt-0 pb-[25px] md:pb-0 px-5 md:px-0">
                                     <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
                                         Chris Robinson
                                     </h6>
                                     <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
                                         Executive Account Manager, NCS
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="flex rounded-[18px] overflow-hidden">
-                            <div class="max-w-[320px]">
-                                <figure class="w-full h-full ">
-                                    <img class="w-full h-full object-cover" src="assets/images/justin-modrak.webp" alt="Justin Modark">
-                                </figure>
-                            </div>
-                            <div class="max-w-[640px] bg-[#ffffff] flex justify-center flex-col grow md:min-h-[310px] pl-[60px] pr-[55px] ">
-                                <div class="md:mt-10 md:mb-5">
-                                    <h4 class="text-base sm:text-xl md:text-2xl leading-6 sm:leading-8 text-darkAsh font-bold text-center md:text-left ">
-                                        "Hexnode is of great value. Works great with Android and iOS!"
-                                    </h4>
-                                </div>
-                                <div class="flex justify-center items-center flex-col md:min-h-[120px]">
-                                    <h6 class="text-center md:text-left mx-auto w-full text-sm sm:text-xl leading-[11px] sm:leading-[33px] pb-[5px] sm:pb-0 text-darkAsh font-bold ">
-                                        Justin Modrak
-                                    </h6>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
-                                        Technology Coordinator
-                                    </small>
-                                    <small class="text-center md:text-left w-full mx-auto md:mr-auto md:ml-[unset] text-xs leading-4 sm:text-sm sm:leading-[18px] text-darkAsh font-normal max-w-[294px] opacity-70 ">
-                                        East Troy Community School District
                                     </small>
                                 </div>
                             </div>
@@ -990,11 +1170,11 @@
                 </h3>
 
                 <div class=" mt-[20px] mx-auto">
-                    <form action="#" class="flex justify-center">
+                    <form action="#" class="flex flex-col items-center md:items-start  md:flex-row justify-center">
                         <div class="w-[324px] h-[53px] sm:mr-[8px]">
                             <input type="email" placeholder="Your Work Email" class="text-lg leading-6 w-full h-full rounded-[3px] px-2.5 placeholder:text-[#c6c6c6]">
                         </div>
-                        <button class="w-[195px] h-[53px] text-[17px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] uppercase transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED</button>
+                        <button class="w-[324px] md:w-[195px] h-[53px] text-[17px] mt-[15px] md:mt-[0px] text-white leading-6 bg-cmnRed rounded-[3px] hover:bg-[#bb022a] uppercase transition  duration-250 hover:transition  hover:duration-250 hover:ease-in-out">GET STARTED</button>
                     </form>
                 </div>
 
@@ -1014,8 +1194,8 @@
     <footer>
         <div class="bg-[#f2f2f2] p-[30px_0] sm:p-[20px_0]">
             <div class="container w-[88%] mx-auto md:max-w-[1300px]">
-                <div class="flex justify-between">
-                    <ul class="flex">
+                <div class="flex justify-between sm:flex-row flex-col items-center">
+                    <ul class="flex sm:mb-0 mb-5">
                         <li class="inline-block leading-1 list-none after:content-['-'] after:text-[14px] after:leading-1 after:inline-flex after:p-[0_5px] after:opacity-8 last:after:hidden">
                             <a href="https://www.hexnode.com/legal/terms-of-use/" class="text-xs leading-6 text-csAsh font-medium cursor-pointer transition-all duration-[0.3s] ease-in-out hover:text-darkAsh">
                                 Terms of Use
