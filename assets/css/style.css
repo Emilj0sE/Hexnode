@@ -618,6 +618,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -632,6 +636,10 @@ video {
 
 .right-0 {
   right: 0px;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .top-0 {
@@ -792,6 +800,10 @@ video {
   height: 2.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-\[15px\] {
   height: 15px;
 }
@@ -842,6 +854,14 @@ video {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-6 {
@@ -1154,6 +1174,11 @@ video {
 .bg-\[\#1A1C2B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(26 28 43 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#2E72F6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 114 246 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#f2f2f2\] {
@@ -2030,6 +2055,11 @@ header .navbar-toggler span.scrolled {
 }
 
 .hover\:bg-\[\#bb022a\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 2 42 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-hoverRed:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(187 2 42 / var(--tw-bg-opacity, 1));
 }
